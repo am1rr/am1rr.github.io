@@ -7,7 +7,7 @@
         <title>Docker</title>
     </head>
     <body>
-
+        <p><a href="index.html">Go home</a></p>
         <div id="docker">
             <h1>Docker</h1>
             <div>
@@ -17,8 +17,8 @@
                     VirtualBox o similar.
                 </p>
                 <p>
-                    Un software de máquinas virtuales necesita instalar el S.O completo. Ejemplos
-                    de sistemas de virtualizaciónl:
+                    Un software de máquinas virtuales necesita instalar el S.O completo. Ejemplos de
+                    sistemas de virtualizaciónl:
                     <ul>
                         <li>VirtualBox(Multiples plataformas)</li>
                         <li>Parallel(Only MAC)</li>
@@ -29,10 +29,10 @@
                         <li>XEN(Only UNIX/Linux</li>
                     </ul>
                     <p>
-                        Un SoftWare de contenedores es un sistema de virtualización que
-                        comparte el kernel con el anfitrión. Se basa en el concepto de
-                        microservicio, donde tengo todos los programas instalados, configurados
-                        y funcionando, gracias a los contenedores. Ejemplo de SoftWare de contenedores:
+                        Un SoftWare de contenedores es un sistema de virtualización que comparte el
+                        kernel con el anfitrión. Se basa en el concepto de microservicio, donde tengo
+                        todos los programas instalados, configurados y funcionando, gracias a los
+                        contenedores. Ejemplo de SoftWare de contenedores:
                     </p>
                     <ul>
                         <li>Docker</li>
@@ -47,20 +47,70 @@
                     Para saber mas sobre el tema:
                 </p>
                 <ul>
-                    <li><a href="https://www.docker.com/" target="_blank">Web Oficial de Docker</a></li>
-                    <li><a href="https://hub.docker.com/" target="_blank">Docker Hub (Listado de contenedores)</a></li>
-                    <li><a href="https://docs.docker.com/get-started/" target="_blank">Tutorial de Docker</a></li>
+                    <li>
+                        <a href="https://www.docker.com/" target="_blank">Web Oficial de Docker</a>
+                    </li>
+                    <li>
+                        <a href="https://hub.docker.com/" target="_blank">Docker Hub (Listado de contenedores)</a>
+                    </li>
+                    <li>
+                        <a href="https://docs.docker.com/get-started/" target="_blank">Tutorial de Docker</a>
+                    </li>
                 </ul>
             </div>
         </div>
         <div id="dockerfile">
             <h2>Docker File</h2>
             <p>
-                Un <span class="destacado">Dockerfile</span> es una receta para crear una imagen
-                para una aplicación particular de Docker. De este modo podemos
-                tomar una imagen base, instalarle programas, configurar esos programas y dejarla preparada
-                para crear contenedores a partir de ella.
+                Un
+                <span class="destacado">Dockerfile</span>
+                es una receta para crear una imagen para una aplicación particular de Docker. De
+                este modo podemos tomar una imagen base, instalarle programas, configurar esos
+                programas y dejarla preparada para crear contenedores a partir de ella.
             </p>
+<pre>
+m,m# Use phusion/baseimage as base image.
+FROM ubuntu:latest                                              
+
+# Use baseimage-docker's init system.
+CMD ["/sbin/my_init"]                                           
+        
+# Install prerequisites
+RUN apt-get update; \                                           
+apt-get install -y udhcpd
+
+# Set up start up scripts
+RUN mkdir /etc/service/udhcpd
+ADD udhcpd.sh /etc/service/udhcpd/run
+RUN chmod +x /etc/service/udhcpd/run
+        
+# Clean up APT when done.
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+        
+# Expose the port
+EXPOSE 67
+EXPOSE 67/udp
+EXPOSE 68
+EXPOSE 68/udp
+        
+# Volumes
+VOLUME /data
+</pre>
+<pre>
+Comando FROM: Buscas la imagen mas reciente de Ubuntu con ubuntu:latest
+Comando RUN: Ejecutas y añades scrip para actualizar el sistema e instalar udhcp 
+Comando EXPOSE: Abres los puertos 67 y 68
+Comando VOLUME: Comparte una carpeta entre el contenedor de Docker y el host (Tu ordenador)
+
+Comandos a ejecturar
+- docker build . (Crea el contenedor)
+- docker run -d --net=host -p 67:67 -p 67:67/udp -
+</pre>
+
         </div>
     </body>
 </html>
+
+
+
+
