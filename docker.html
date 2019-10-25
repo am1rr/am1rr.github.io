@@ -76,7 +76,8 @@ FROM ubuntu:latest
 CMD ["/sbin/my_init"]                                           
         
 # Install prerequisites
-RUN apt-get update; \                                           
+RUN apt-get update; \                 
+
 apt-get install -y udhcpd
 
 # Set up start up scripts
@@ -102,9 +103,29 @@ Comando RUN: Ejecutas y añades scrip para actualizar el sistema e instalar udhc
 Comando EXPOSE: Abres los puertos 67 y 68
 Comando VOLUME: Comparte una carpeta entre el contenedor de Docker y el host (Tu ordenador)
 
-Comandos a ejecturar
-- docker build . (Crea el contenedor)
-- docker run -d --net=host -p 67:67 -p 67:67/udp -
+CREAMOS EL ARCHIVOS udhcpd.conf
+
+# The start and end of the IP lease block
+start	172.17.0.200
+end		172.17.0.210
+
+# The interface that udhcpd will use
+interface	eth0
+
+opt	dns	192.168.18.3 8.8.8.8
+option	subnet	255.255.0.0
+opt	router	172.17.0.1
+# opt	wins	192.168.10.10
+# option	dns	129.219.13.81	# appended to above DNS servers for a total of 3
+option	domain	local
+option	lease	864000		
+
+CREAR EL CONTENEDOR:
+docker build .
+
+LANZAR EL CONTENEDOR: docker run -d --net=host -p 67:67 -p 67:67/udp -p 68:68 -p 68:68/udp --name=dhcpd -v "RUTA AL DIRECTORIO udhcpd"/data ubuntu:latest
+
+ABRIR TERMINAL EN CONTENEDOR: docker exec -ti NOMBRE_CONTENEDOR /bin/bash
 </pre>
 
         </div>
