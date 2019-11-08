@@ -1,56 +1,205 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-a {
-    text-decoration: none;
-    color: white;
+/* Animaciones */
+/* Daga */
+@keyframes daggermv {
+    0% {transform: rotateZ(360deg);}
+    40%{transform: rotateZ(-360deg);}
 }
-.inav {
-    width: 20%;
-    height: 900px;
+/* H1 PORTFOLIO AMIR */
+@keyframes h1hover {
+    to {margin-top: 20px;border-bottom: 2px solid white;}
+}
+/* CSS Header */
+.nav-box1 {
+    background-color: rgb(243, 109, 0);
+    height: 95px;
+    border-bottom: solid rgb(204, 204, 204) 20px;
     text-align: center;
-    background-image: linear-gradient(to bottom, #2606a7, #226daf,#25fff2  );
+    position: sticky;
+    top: 0px;
+    z-index: 9;
+
+}
+.nav-box1 ul li {
+    float: left;
+    width: 120px;
     color: white;
+    margin-top: 38px;
+}
+.nav-box1 ul li:nth-of-type(1) {
+    margin-left: 18%;
+}
+#daga {
+    position: absolute;
+    left: 35px;
+    top: 0px;
+    width: 50px;
+    animation: daggermv;
+    animation-duration: 2s;
+}
+
+.nav-box1 h1 {
+    color: white;
+    font-size: 2em;
+    font-family: fantasy;
+    text-align: left;
     float: left;
+    margin-top: 32px;
+    margin-left: 115px;
 }
-.inav ul {
-    list-style: none;
+.nav-box1 h1:hover {
+    animation: h1hover;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
 }
-.inav ul li{
-    margin: 10%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+.decoration {
+    height: 450px;
+    padding-top: 25px;
 }
-.imain {
+.deco-box1{
+    width: 90%;
+    height: 390px;
+    background-color: rgb(134, 124, 226);
+    margin: auto;
+    border-bottom: 15px solid gray;
+}
+.deco-box1 h1 {
+    color: white;
+    width: 190px;
     float: left;
-    height: 900px;
-    width: 80%;
+    font-size: 2em;
+    margin-top: 45px;
+    margin-left: 45px;
+    
+}
+.deco-box1 p {
+    color: white;
+    width: 300px;
+    float: left;
+    clear: both;
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 45px;
+}
+.deco-box2 {
+    width: 50%;
+    height: 300px;
+    float: left;
+    position: relative;
+    bottom: 90px;
+    left: 20px;
     background-image: url(../img/wp.jpg);
     background-size: cover;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
-.ifooter {
-    background-color: #252425;
+
+main {
+    height: 425px;
+    background-color: rgb(199, 199, 199);
+    border-bottom: 40px solid gray;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* ARTICULO 1 */
+.art1 {
+    float: left;
+    width: 225px;
+    height: 300px;
+    background-color: rgb(60, 95, 119);
+    vertical-align: middle;
+    margin-top:60px;
+    margin-left: 20px;
+    border-radius: 20px;
     text-align: center;
-    color: black;
-    font-weight: bold;
 }
-.ifooter p {
-    padding: 25px;
-}
-
-.inav ul li:hover {
-    animation-name: navan1;
-    animation-duration: 0.2s;
-    animation-fill-mode: forwards;
+.art1 h2{
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
 }
 
-
-@keyframes navan1 {
-    from {}
-    to {margin-left: 40px; text-decoration: underline;}
+.art1 p{
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
 }
-.ibox1 { 
+.art1 div{
+    width: 130px;
+    height: 25px;
+    margin: auto;
+    margin-top: 70px;
+    background-color:rgb(243, 109, 0) ;
+    border-radius: 10px;
+}
+.art1 div:hover {
+    background-color: orange;
+}
 
+
+.art2 {
+    float: left;
+    width: 225px;
+    height: 300px;
+    background-color: rgb(20, 20, 20);
+    vertical-align: middle;
+    margin-top:60px;
+    margin-left: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+.art2 h2{
+    margin-top: -20px;
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+}
+.art2 p{
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+.art2 .pra1{
+    width: 95px;
+    height: 25px;
+    margin: auto;
+    margin-top: 70px;
+    background-color:rgb(243, 109, 0) ;
+    border-radius: 10px;
+    float: left;
+    margin-left: 10px;
+}
+.art2 .pra1:hover {
+    background-color: orange;
+}
+.art2 .pra2 {
+    width: 95px;
+    height: 25px;
+    margin: auto;
+    margin-top: 70px;
+    background-color:rgb(243, 109, 0) ;
+    border-radius: 10px;
+    float: left;
+    margin-left: 20px;
+}
+.art2 .pra2:hover {
+    background-color: orange;
+}
+
+
+
+
+footer {
+    height: 65px;
+    background-color:rgb(243, 109, 0) ;
+    color: white;
+    text-align: center;
+}
+footer p{
+    float: left;
+    margin-top:20px;
+    margin-left: 5%;
 }
