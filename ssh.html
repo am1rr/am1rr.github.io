@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practica SSH</title>
+</head>
+<body>
+    <h1>PRACTICA SSH</h1>
+    <h2>Ejercicio 1</h2>
+    <p>Instalar Telnet</p>
+    <p>Lo primero que tenemos que hacer es instalar telnet
+        mediante
+        "sudo apt install telnetd"
+    </p>
+    <img src="img/telnet1.png" width="300px"></img>
+    <p>Despues ejecutamos el siguiente comando para iniciar el servidor Telnet</p>
+    <img src="img/telnet2.png" width="300px"></img>
+    <p>Comprobamos que el Telnet esta funcionando con un "nmap localhost"</p>
+    <img src="img/telnet10.png" width="300px"></img>
+    <p>Cuando lo tengamos ejecutado nos conoectaremos con el comando
+        "telnet 192.168.18.210" Esta última es la Ip de mi RaspberryPi
+    </p>
+    <img src="img/telnet11.png" width="300px"></img>
+    <p>Probamos comandos y vamos al WireShark y desde allí buscamos paquetes Telnet y seleccionamos la opcion
+        "Follow TCP Stream"
+    </p>
+    <img src="img/telnet20.png" width="400px"></img>
+    <p>Y aqui vemos  todos los datos del paquete</p>
+
+</body>
+</html>

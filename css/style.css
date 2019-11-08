@@ -1,9 +1,56 @@
-header {
-    background-color: red; 
-    width: 100%;
-}
-header h1 {
+* {
     margin: 0px;
-    padding: 25px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    text-decoration: none;
     color: white;
+}
+.inav {
+    width: 20%;
+    height: 900px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #2606a7, #226daf,#25fff2  );
+    color: white;
+    float: left;
+}
+.inav ul {
+    list-style: none;
+}
+.inav ul li{
+    margin: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.imain {
+    float: left;
+    height: 900px;
+    width: 80%;
+    background-image: url(../img/wp.jpg);
+    background-size: cover;
+}
+.ifooter {
+    background-color: #252425;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+.ifooter p {
+    padding: 25px;
+}
+
+.inav ul li:hover {
+    animation-name: navan1;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes navan1 {
+    from {}
+    to {margin-left: 40px; text-decoration: underline;}
+}
+.ibox1 { 
+
 }
