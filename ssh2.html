@@ -37,50 +37,50 @@
                     <h1>PASO 1</h1>
                     <p>Instalar servidor SSH en linux y comprobar que se escucha el puerto 22.</p>
                     <p>sudo nmap -sU --top-ports 1000 scanme.nmap.org</p>
-                    <img src="img/ssh1.PNG"/>
+                    <img src="img/ssh1.png"/>
                 </div>
                 <div class="ssh-box1">
                         <h1>PASO 2</h1>
                         <p>Crear dos usuarios denominados usuario1 y usuario2.</p>
                         <p>sudo useradd -m -d /home/alumno1 alumno1 -s /bin/bash
                         </p>
-                        <img src="img/ssh2.PNG"/>
+                        <img src="img/ssh2.png"/>
                 </div>
                 <div class="ssh-box1">
                     <h1>PASO 3</h1>
                     <p>Comprobar que podemso acceder mendiante ssh a estos usuarios.</p>
                     <p>ssh alumno1@192.168.18.210</p>
-                    <img src="img/ssh3.PNG"/>
+                    <img src="img/ssh3.png"/>
                 </div>
                 <div class="ssh-box1">
                     <h1>PASO 4</h1>
                     <p>Cambiar de puerto del servidor e intentar acceder de nuevo</p>
                     <p>Port 2222</p>
-                    <img src="img/ssh8.PNG"/>
+                    <img src="img/ssh8.png"/>
                 </div>
                 <div class="ssh-box1">
                     <h1>PASO 5.1</h1>
                     <p>Cambiar configuracion del servidor para acceder con el usr1 y no con el usr2</p>
                     <p>AllowUsers alumno2 , DenyUsers alumno2</p>
-                    <img src="img/ssh5.PNG"/>
+                    <img src="img/ssh5.png"/>
                 </div>
                 <div class="ssh-box1">
                     <h1>PASO 5.2</h1>
                     <p>Comprobar el acceso</p>
                     <p>ssh alumno2@192.168.18.210</p>
-                    <img src="img/ssh4.PNG" id="subir"/>
+                    <img src="img/ssh4.png" id="subir"/>
                 </div>
                 <div class="ssh-box1">
                     <h1>PASO 6</h1>
                     <p>Cambiar la configuracion para que solo pueda acceder una IP determinada.</p>
                     <p>AllowIP 192.168.18.247</p>
-                    <img src="img/ssh6.PNG"/>
+                    <img src="img/ssh6.png"/>
                 </div>
                 <div class="ssh-box1">
                     <h1>PASO 7</h1>
                     <p>Comprobar en Wireshark que los paquetes estas encriptados</p>
                     <p>Va encriptado</p>
-                    <img src="img/ssh7.PNG"/>
+                    <img src="img/ssh7.png"/>
                 </div>
             </main>
             <footer>
