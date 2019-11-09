@@ -193,9 +193,6 @@ a:hover {
     background-color: orange;
 }
 
-
-
-
 footer {
     height: 65px;
     background-color:rgb(243, 109, 0) ;
@@ -271,4 +268,80 @@ footer p{
 }
 .high {
     font-weight: bold;
+}
+.ssh1main {
+    height: 1300px;
+    background-color: rgb(199, 199, 199);
+    border-bottom: 40px solid gray;
+
+}
+
+.ssh-box1 {
+    margin: 0px;
+    width: 45%;
+    height: 400px;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(221, 221, 221);
+    text-align: center;
+    border-radius: 10px;
+}
+.ssh-box1 p {
+    background-color: orange;
+    color: white;
+}
+.ssh-box1 h1 {
+    background-color: orange;
+    color: white;
+}
+.ssh-box1 h1{
+    font-size: 1.5em;
+}
+.ssh-box1 p:nth-of-type(2) {
+    color: red;
+}
+.ssh-box1 img {
+    margin-top: 50px;
+    width: 400px;
+}
+
+#flecha {
+    width: 145px;
+}
+#flecha:hover {
+    opacity: 0.6;
+}
+.deco-box2main {
+    width: 50%;
+    height: 300px;
+    float: left;
+    position: relative;
+    bottom: 130px;
+    left: 75px;
+    background-image: url(../img/ese.jpg);
+    background-size: cover;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+#subir {
+    width: 275px;
+}
+.mainssh2 {
+    height: 1675px;
+    background-color: rgb(199, 199, 199);
+    border-bottom: 40px solid gray;
+    padding-top: 20px;
+}
+.deco-box5 {
+    width: 50%;
+    height: 300px;
+    float: left;
+    position: relative;
+    bottom: 65px;
+    left: 35px;
+    background-image: url(../img/ll.jpg);
+    background-size: cover;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
 }

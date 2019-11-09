@@ -1,33 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Practica SSH</title>
+    <title>Practica SSH1</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
-    <h1>PRACTICA SSH</h1>
-    <h2>Ejercicio 1</h2>
-    <p>Instalar Telnet</p>
-    <p>Lo primero que tenemos que hacer es instalar telnet
-        mediante
-        "sudo apt install telnetd"
-    </p>
-    <img src="img/telnet1.png" width="300px"></img>
-    <p>Despues ejecutamos el siguiente comando para iniciar el servidor Telnet</p>
-    <img src="img/telnet2.png" width="300px"></img>
-    <p>Comprobamos que el Telnet esta funcionando con un "nmap localhost"</p>
-    <img src="img/telnet10.png" width="300px"></img>
-    <p>Cuando lo tengamos ejecutado nos conoectaremos con el comando
-        "telnet 192.168.18.210" Esta última es la Ip de mi RaspberryPi
-    </p>
-    <img src="img/telnet11.png" width="300px"></img>
-    <p>Probamos comandos y vamos al WireShark y desde allí buscamos paquetes Telnet y seleccionamos la opcion
-        "Follow TCP Stream"
-    </p>
-    <img src="img/telnet20.png" width="400px"></img>
-    <p>Y aqui vemos  todos los datos del paquete</p>
+   <div id="container">
+            <div class="nav-box1">
+                <img src="img/logo.png" id="daga" alt=""/>
+                <h1>SSH PRACTICA 1</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">INICIO</a></li>
+                        <li>INFORMACION</li>
+                        <li>CONTACTO</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="decoration">
+                <div class="deco-box1">
+                    <h1>Que es SSH?</h1>
+                    <p>SSH es el nombre de un protocolo 
+                        y del programa que lo implementa 
+                        cuya principal función es el acces
+                        o remoto a un servidor por medio de
+                         un canal seguro en el que toda la 
+                         información está cifrada.</p>
+                    <p>La Practica 1 consiste en conectarse
+                        mediante telnet a nuestra Raspberry Pi y 
+                        ejecutar algunos comandos, luego lanzar el 
+                        wireshark y comprobar que los datos no van
+                        encriptados
+                    </p>
+                    <div class="deco-box2main"></div>
+                </div>
+                
+            </div>
+        <main class="ssh1main">
+            <div class="ssh-box1">
+                <h1>PASO 1</h1>
+                <p>Instalar Telnet mediante el siguiente comando</p>
+                <p>sudo apt install telnetd</p>
+                <img src="img/telnet1.PNG">
+            </div>
+            <div class="ssh-box1">
+                <h1>PASO 2</h1>
+                <p>Despues ejecutamos el siguiente comando para iniciar el servidor Telnet</p>
+                <p>sudo /etc/init.d/openbsd-inetd restart</p>
+                <img src="img/telnet2.PNG">
+            </div>
+            <div class="ssh-box1">
+                    <h1>PASO 3</h1>
+                    <p>Comprobamos que el Telnet esta funcionando con un:</p>
+                    <p>nmap localhost</p>
+                    <img src="img/telnet5.PNG">
+            </div>
+            <div class="ssh-box1">
+                    <h1>PASO 4</h1>
+                    <p>Cuando lo tengamos ejecutado nos conoectaremos con el comando (192.168.18.210 es la Ip de la Raspberry):</p>
+                    <p>telnet 192.168.18.210</p>
+                    <img src="img/telnet11.PNG">
+            </div>
+            <div class="ssh-box1">
+                    <h1>PASO 5</h1>
+                    <p>Ejecutamos algunos comandos desde Telnet y vamos al wireshark a analizar trafico.</p>
+                    <p>Follow TCP Stream</p>
+                    <img src="img/telnet20.PNG">
+            </div>
+            <div class="ssh-box1">
+                <h1>FIN</h1>
+                <p>En Wireshark podemos observar como los comandos
+                    van en texto plano y no estran encriptados. Y ya 
+                    queda concluida la primera practica de SSH.
+                </p>
+                <p>...</p>
+                <a href="#container"><img src="img/goup.png" id="flecha"></a>
+            </div>
+        </main>
+        <footer>
+            <p>Website designed by Amir</p>
+        </footer>
 
+   </div>
 </body>
 </html>
