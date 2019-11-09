@@ -106,6 +106,10 @@ a {
     color: white;
     text-decoration: none;
 }
+a:hover {
+    color: white;
+    text-decoration-line: underline;
+}
 
 
 /* ARTICULO 1 */
@@ -202,4 +206,69 @@ footer p{
     float: left;
     margin-top:20px;
     margin-left: 5%;
+}
+.deco-box3 {
+    float: left;
+
+}
+.deco-box3 ul {
+    list-style: square;
+    margin-left: 65px;
+}
+.deco-box4 {
+    float: left;
+}
+.deco-box4 ul {
+    margin-left: 65px;
+    list-style: square;
+}
+.dockmain {
+    height: 1200px;
+    background-color: rgb(199, 199, 199);
+    border-bottom: 40px solid gray;
+    text-align: center;
+}
+.dockmain h2 {
+    font-size: 1.5em;
+   font-weight: bold;
+}
+.dockmain img {
+    border-radius:10px ;
+    background-color: rgb(221, 221, 221);
+    box-shadow: 5px 5px gray;
+}
+.sabermas {
+    background-color: rgb(134, 124, 226);
+    padding: 10px;
+}
+.sabermas p{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.dockerfile {
+    float: left;
+    width: 500px;
+    height: 640px;
+    text-align: left;
+    background-color: rgb(221, 221, 221);
+}
+.dockerfile pre {
+    margin: 20px;
+}
+.dock {
+    text-align: left;
+    margin-left: 525px;
+}
+.dock ul {
+    list-style: square;
+    margin-top: 15px;
+}
+.dock pre {
+    margin-top: 10px;
+}
+.hig {
+    background-color: yellow;
+}
+.high {
+    font-weight: bold;
 }
