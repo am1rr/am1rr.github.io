@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Practica 1</title>
+        <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <img src="img/logo1.png" alt="logo" width="100"/>
+            </header>
+            <nav class="nav-bar-1">
+                <ul>
+                    <li>
+                        <a href="index.html">INICIO</a>
+                    </li>
+                    <li>
+                        <a href="#">CONTACTO</a>
+                    </li>
+                    <li>
+                        <a href="#">SOBRE MI</a>
+                    </li>
+                    <li>
+                        <a href="#">AYUDA</a>
+                    </li>
+                </ul>
+            </nav>
+            <aside class="deco-img">
+                <p>QUE ES SSH?</p>
+                <p>SSH es el nombre de un protocolo y del programa que lo implementa cuya
+                    principal función es el acceso remoto a un servidor por medio de un canal seguro
+                    en el que toda la información está cifrada.
+                </p>
+                <pre>
+La practica 1 consiste en conectarse mediante telnet a nuestra raspberry pi 
+y ejecutar algunos comandos, luego lanzar el wireshark y 
+comprobar que los datos no van encriptados
+                </pre>
+            </aside>
+            <main class="ssh1-main">
+                <div class="ssh1-dia">
+                    <h2>PASO 1</h2>
+                    <p>Instalar Telnet mediante el siguiente comando</p>
+                    <p>sudo apt install telnetd</p>
+                    <img src="img/telnet1.PNG"/>
+                </div>
+                <div class="ssh1-dia">
+                    <h2>PASO 2</h2>
+                    <p>Despues ejecutamos el siguiente comando para iniciar el servidor Telnet</p>
+                    <p>sudo /etc/init.d/openbsd-inetd restart</p>
+                    <img src="img/telnet2.PNG" width="450"/>
+                </div>
+                <div class="ssh1-dia">
+                    <h2>PASO 3</h2>
+                    <p>Comprobamos que el Telnet esta funcionando con un:</p>
+                    <p>snmap localhost</p>
+                    <img src="img/telnet5.PNG" width="450"/>
+                </div>
+                <div class="ssh1-dia">
+                    <h2>PASO 4</h2>
+                    <p>Cuando lo tengamos ejecutado nos conoectaremos con el comando (192.168.18.210
+                        es la Ip de la Raspberry):</p>
+                    <p>telnet 192.168.18.210</p>
+                    <img src="img/telnet11.PNG" width="390"/>
+                </div>
+                <div class="ssh1-dia">
+                    <h2>PASO 5</h2>
+                    <p>Ejecutamos algunos comandos desde Telnet y vamos al wireshark a analizar
+                        trafico.</p>
+                    <p>Follow TCP Stream</p>
+                    <img src="img/telnet20.PNG" width="320"/>
+                </div>
+                <div class="ssh1-dia">
+                    <h2>PASO 6</h2>
+                    <p>En Wireshark podemos observar como los comandos van en texto plano y no
+                        estran encriptados. Y ya queda concluida la primera practica de SSH.
+                    </p>
+                    <p>...</p>
+                    <a href="ssh1.html"><img src="img/flecha.png" id="imagen" width="200"/></a>
+                </div>
+            </main>
+            <footer>
+                <p>Website Designed By Amir</p>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,347 +1,295 @@
 * {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box ;
+    -webkit-box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
-/* Animaciones */
-/* Daga */
-@keyframes daggermv {
-    0% {transform: rotateZ(360deg);}
-    40%{transform: rotateZ(-360deg);}
-}
-/* H1 PORTFOLIO AMIR */
-@keyframes h1hover {
-    to {margin-top: 20px;border-bottom: 2px solid white;}
-}
-/* CSS Header */
-.nav-box1 {
-    background-color: rgb(243, 109, 0);
-    height: 95px;
-    border-bottom: solid rgb(204, 204, 204) 20px;
-    text-align: center;
-    position: sticky;
-    top: 0px;
-    z-index: 9;
-
-}
-.nav-box1 ul li {
-    float: left;
-    width: 120px;
-    color: white;
-    margin-top: 38px;
-}
-.nav-box1 ul li:nth-of-type(1) {
-    margin-left: 18%;
-}
-#daga {
-    position: absolute;
-    left: 35px;
-    top: 0px;
-    width: 50px;
-    animation: daggermv;
-    animation-duration: 2s;
-}
-
-.nav-box1 h1 {
-    color: white;
-    font-size: 2em;
-    font-family: fantasy;
-    text-align: left;
-    float: left;
-    margin-top: 32px;
-    margin-left: 115px;
-}
-.nav-box1 h1:hover {
-    animation: h1hover;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
-}
-.decoration {
-    height: 450px;
-    padding-top: 25px;
-}
-.deco-box1{
-    width: 90%;
-    height: 390px;
-    background-color: rgb(134, 124, 226);
-    margin: auto;
-    border-bottom: 15px solid gray;
-}
-.deco-box1 h1 {
-    color: white;
-    width: 190px;
-    float: left;
-    font-size: 2em;
-    margin-top: 45px;
-    margin-left: 45px;
-    
-}
-.deco-box1 p {
-    color: white;
-    width: 300px;
-    float: left;
-    clear: both;
-    margin-top: 20px;
-    text-align: left;
-    margin-left: 45px;
-}
-.deco-box2 {
-    width: 50%;
-    height: 300px;
-    float: left;
-    position: relative;
-    bottom: 90px;
-    left: 20px;
-    background-image: url(../img/wp.jpg);
-    background-size: cover;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
-}
-
-main {
-    height: 425px;
-    background-color: rgb(199, 199, 199);
-    border-bottom: 40px solid gray;
+body {
+    background-color: rgb(7, 4, 4);
 }
 a {
-    color: white;
     text-decoration: none;
-}
-a:hover {
     color: white;
-    text-decoration-line: underline;
 }
 
-
-/* ARTICULO 1 */
-.art1 {
-    float: left;
-    width: 225px;
-    height: 300px;
-    background-color: rgb(60, 95, 119);
-    vertical-align: middle;
-    margin-top:60px;
-    margin-left: 20px;
-    border-radius: 20px;
+#container {
+    margin: 0 auto;
+    width: 1200px;
+    height: 2500px;
+}
+header {
     text-align: center;
+    height: 150px;
+    background-color: #222831;
 }
-.art1 h2{
-    color: rgb(255, 255, 255);
-    font-size: 1.5em;
-}
-
-.art1 p{
-    color: rgb(255, 255, 255);
+header img {
     margin-top: 10px;
+    border: 2px solid darkred;
+    border-radius: 50%;
 }
-.art1 div{
-    width: 130px;
-    height: 25px;
-    margin: auto;
-    margin-top: 70px;
-    background-color:rgb(243, 109, 0) ;
-    border-radius: 10px;
+.nav-bar-1 {
+    position: sticky;
+    top: 0px;
+    z-index: 10;
 }
-.art1 div:hover {
-    background-color: orange;
-}
-
-
-.art2 {
-    float: left;
-    width: 225px;
-    height: 300px;
-    background-color: rgb(20, 20, 20);
-    vertical-align: middle;
-    margin-top:60px;
-    margin-left: 20px;
-    border-radius: 20px;
+.nav-bar-1 ul {
     text-align: center;
+    background-color:#222831 ;
+    position: sticky;
+    border-bottom: 10px solid #222831 ;
+    border-top: 10px solid #222831 ;
 }
-.art2 h2{
-    margin-top: -20px;
-    color: rgb(255, 255, 255);
-    font-size: 1.5em;
-}
-.art2 p{
-    color: rgb(255, 255, 255);
-    margin-top: 10px;
-}
-.art2 .pra1{
-    width: 95px;
-    height: 25px;
-    margin: auto;
-    margin-top: 70px;
-    background-color:rgb(243, 109, 0) ;
-    border-radius: 10px;
-    float: left;
-    margin-left: 10px;
-}
-.art2 .pra1:hover {
-    background-color: orange;
-}
-.art2 .pra2 {
-    width: 95px;
-    height: 25px;
-    margin: auto;
-    margin-top: 70px;
-    background-color:rgb(243, 109, 0) ;
-    border-radius: 10px;
-    float: left;
-    margin-left: 20px;
-}
-.art2 .pra2:hover {
-    background-color: orange;
-}
-
-footer {
-    height: 65px;
-    background-color:rgb(243, 109, 0) ;
+.nav-bar-1 ul li {
+    display: inline-block;
     color: white;
+    background-color:#393e46 ;
+    padding: 5px 30px 5px 30px;
+    border-radius: 5px;
+}
+.nav-bar-1 ul li:hover {
+    box-shadow: red 0px 0px 2px 2px;
+}
+.deco-img {
+    height: 400px;
+    background-color:#393e46 ;
     text-align: center;
+    padding-top: 50px;
 }
-footer p{
-    float: left;
-    margin-top:20px;
-    margin-left: 5%;
+.deco-img p:nth-child(1) {
+    color: white;
+    font-size: 2.2em;
+    text-shadow: #222831 4px 4px;
 }
-.deco-box3 {
-    float: left;
-
+.deco-img p:nth-child(2) {
+    color: white;
+    font-size: 1.8em;
+    text-shadow: #222831 4px 4px;
+    margin: 20px 180px 20px 180px;
 }
-.deco-box3 ul {
-    list-style: square;
-    margin-left: 65px;
-}
-.deco-box4 {
-    float: left;
-}
-.deco-box4 ul {
-    margin-left: 65px;
-    list-style: square;
-}
-.dockmain {
-    height: 1200px;
-    background-color: rgb(199, 199, 199);
-    border-bottom: 40px solid gray;
-    text-align: center;
-}
-.dockmain h2 {
-    font-size: 1.5em;
-   font-weight: bold;
-}
-.dockmain img {
-    border-radius:10px ;
-    background-color: rgb(221, 221, 221);
-    box-shadow: 5px 5px gray;
-}
-.sabermas {
-    background-color: rgb(134, 124, 226);
-    padding: 10px;
-}
-.sabermas p{
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-.dockerfile {
-    float: left;
+.deco-img pre {
+    color: white;
+    font-size: 1em;
+    text-align: left;
+    text-shadow: #222831 4px 4px;
     width: 500px;
-    height: 640px;
-    text-align: left;
-    background-color: rgb(221, 221, 221);
+    margin-left: 50px;
+    float: left;
 }
-.dockerfile pre {
-    margin: 20px;
+
+
+main {
+    background-color: #00adb5;
+    height: 1800px;
+    padding: 50px;
 }
-.dock {
-    text-align: left;
-    margin-left: 525px;
+
+/*.articulo1 {
+    float: left;
+    border: 1px solid black;
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color:#222831 ;
+}*/
+
+.article1 {
+    float: left;
+    margin: 30px;
 }
-.dock ul {
-    list-style: square;
-    margin-top: 15px;
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 350px;
+    perspective: 1000px;
+    
 }
-.dock pre {
-    margin-top: 10px;
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
 }
-.hig {
-    background-color: yellow;
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
 }
-.high {
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+  
+.flip-card-front {
+    text-align: center;
+    background-color: #bbb;
+    color: black;
+    border-bottom: 10px solid #222831;
+}
+.flip-card-front h2 {
+    padding: 5px;
+    color:#222831 ;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.flip-card-front p {
+    padding: 5px;
+    color:#222831 ;
+    font-weight: bold;
+    background-color: rgb(114, 114, 114);
+}
+.flip-card-back {
+    text-align: center;
+    background-color: #222831;
+    color: black;
+    transform: rotateY(180deg);
+    border-bottom: 10px solid #bbb;
+}
+.flip-card-back h2 {
+    padding: 5px;
+    color:#222831 ;
     font-weight: bold;
 }
-.ssh1main {
-    height: 1300px;
-    background-color: rgb(199, 199, 199);
-    border-bottom: 40px solid gray;
-
-}
-
-.ssh-box1 {
-    margin: 0px;
-    width: 45%;
-    height: 400px;
+.flip-card-back p {
+    padding: 5px;
+    color:white ;
+    font-weight: bold;
+    background-color: #00adb5;
     float: left;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    background-color: rgb(221, 221, 221);
-    text-align: center;
+    padding: 10px;
+    width: 175px;
     border-radius: 10px;
-}
-.ssh-box1 p {
-    background-color: orange;
-    color: white;
-}
-.ssh-box1 h1 {
-    background-color: orange;
-    color: white;
-}
-.ssh-box1 h1{
-    font-size: 1.5em;
-}
-.ssh-box1 p:nth-of-type(2) {
-    color: red;
-}
-.ssh-box1 img {
-    margin-top: 50px;
-    width: 400px;
-}
-
-#flecha {
-    width: 145px;
-}
-#flecha:hover {
-    opacity: 0.6;
-}
-.deco-box2main {
-    width: 50%;
-    height: 300px;
-    float: left;
     position: relative;
-    bottom: 130px;
-    left: 75px;
-    background-image: url(../img/ese.jpg);
-    background-size: cover;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
+    left: 65px;
+    margin-top: 50px;
 }
-#subir {
-    width: 275px;
+.flip-card-back p:hover {
+    box-shadow: white 0px 0px 2px 2px ;
 }
-.mainssh2 {
-    height: 1675px;
-    background-color: rgb(199, 199, 199);
-    border-bottom: 40px solid gray;
+footer {
+    background-color: #eeeeee;
+    height: 80px;
     padding-top: 20px;
 }
-.deco-box5 {
-    width: 50%;
-    height: 300px;
+
+footer p:nth-child(1) {
+    background-color: rgb(165, 165, 165);
+    padding: 10px;
     float: left;
-    position: relative;
-    bottom: 65px;
-    left: 35px;
-    background-image: url(../img/ll.jpg);
-    background-size: cover;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
+    margin-left: 20px;
+}
+
+.docker-main {
+    background-color: #00adb5;
+    height: 1800px;
+    padding: 50px;
+}
+.docker-main h3 {
+    font-size: 1.5em;
+    color: #222831;
+    text-align: center;
+    font-weight: bold;
+}
+.docker-main .seccion1 {
+    text-align: center;
+    height: 90px;
+    background-color: #222831;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: white;
+    padding: 5px;
+}
+.docker-main .seccion1 p {
+    margin-top: 5px;
+}
+.docker-main .seccion1 p:hover {
+    color: #00adb5;
+    text-decoration-line: underline;
+}
+#curs {
+    font-style: oblique;
+}
+.docker-main .seccion2 pre:nth-of-type(1) {
+    background-color: rgb(206, 206, 206);
+    padding-left: 20px;
+}
+.docker-main .seccion2 pre:nth-of-type(2) {
+    padding-left: 20px;
+    background-color: rgb(173, 173, 173);
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius:10px ;
+}
+
+.bold {
+    font-weight: bold;
+}
+.ssh1-main {
+    background-color: #00adb5;
+    height: 1100px;
+    padding: 50px;
+}
+.ssh1-main .ssh1-dia {
+    float: left;
+    width: 500px;
+    height: 325px;
+    border-radius: 10px;
+    margin: 10px 25px 10px 25px;
+    text-align: center;
+    background-color:rgb(173, 173, 173) ;
+    box-shadow: 4px 4px #222831;
+}
+.ssh1-main .ssh1-dia h2, .ssh1-main .ssh1-dia p {
+    background-color: #222831;
+    color: white;
+}
+.ssh1-main .ssh1-dia h2 {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-top: 5px;
+}
+.ssh1-main .ssh1-dia p:nth-of-type(2) {
+    color: #00adb5;
+    
+}
+
+.ssh2-main .ssh1-dia img {
+    margin-top: 20px;
+}
+#imagen:hover {
+    filter: brightness(120%);
+}
+.ssh2-main {
+    background-color: #00adb5;
+    height: 1500px;
+    padding: 50px;
+}
+.ssh2-main .ssh1-dia {
+    float: left;
+    width: 500px;
+    height: 325px;
+    border-radius: 10px;
+    margin: 10px 25px 10px 25px;
+    text-align: center;
+    background-color:rgb(173, 173, 173) ;
+    box-shadow: 4px 4px #222831;
+}
+.ssh2-main .ssh1-dia h2, .ssh2-main .ssh1-dia p {
+    background-color: #222831;
+    color: white;
+}
+.ssh2-main .ssh1-dia h2 {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-top: 5px;
+}
+.ssh2-main .ssh1-dia p:nth-of-type(2) {
+    color: #00adb5;
+    
 }
