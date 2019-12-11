@@ -1,100 +1,288 @@
 <!DOCTYPE html>
-<html lang="es-ES">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Portfolio Amir Khalilov</title>
-        <link rel="stylesheet" type="text/css" href="css/reset.css"/>
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    </head>
-    <body>
-        <div id="container">
-            <header>
-                <img src="img/logo1.png" alt="logo" width="100"/>
-            </header>
-            <nav class="nav-bar-1">
-                <ul>
-                    <li>
-                        <a href="index.html">INICIO</a>
-                    </li>
-                    <li>
-                        <a href="#">CONTACTO</a>
-                    </li>
-                    <li>
-                        <a href="#">SOBRE MI</a>
-                    </li>
-                    <li>
-                        <a href="#">AYUDA</a>
-                    </li>
-                </ul>
-            </nav>
-            <aside class="deco-img">
-                <p>PORTFOLIO DE AMIR KHALILOV</p>
-                <p>Lorem ipsum olor sit ametolor sit amet, consectetur adipiscing elit. Etiam
-                    sed elit consequat, molestie quam at, venen atis orci. Etiauat, molestie quam
-                    at, venen atis orci. Etiamm in teolor sit ametllus finibus, ti ncidunt ipsum a,
-                    consectetur magna.
-                </p>
-            </aside>
-            <main>
-                <article class="article1">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="img/docker.png" alt="" width="250"/>
-                                <h2>DOCKER</h2>
-                                <p>Es una maquina virtual que funciona con contenedores y estos pueden desplegar
-                                    aplicaciones.</p>
-                            </div>
-                            <div class="flip-card-back">
-                                <a href="#">
-                                    <a href="docker.html"><p>Practica 1</p></a>
-                                </a>
-                            </div>
-                        </div>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inicio</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+        if (document.body.scrollTop > 85 || document.documentElement.scrollTop > 85) {
+            document.getElementById("nav-bar").style.cssText = "background-color: black; transition: background-color 1s";
+        } else {
+            document.getElementById("nav-bar").style.cssText = "background-color: transparent; transition: background-color 1s";
+        }
+        }
+    </script>
+    <script>
+          $(document).ready(function() {
+        $('#showdocker').click(function() {
+                $('.dockermenu').toggle("slideDown");
+        });
+    });
+    </script>
+    <script>
+       $(document).ready(function() {
+        $('#showssh').click(function() {
+                $('.sshmenu').toggle("slideDown");
+        });
+    });
+    </script>
+    <script>
+        $(document).ready(function() {
+         $('#showftp').click(function() {
+                 $('.ftpmenu').toggle("slideDown");
+         });
+     });
+     </script>
+    <div class="container">
+        <nav class="nav-bar" id="nav-bar">
+            <div>Inicio</div>
+            <div>Sobre mi</div>
+            <div>Redes</div>
+            <div>Ayuda</div>
+        </nav>
+        <header>
+        </header>
+        <div class="networks">
+            <h1>Redes</h1>
+            <!--Menu Docker-->
+            <div id="showdocker" class="rm">Docker</div>
+            <div class="dockermenu" style="display: none;">
+                <h1>¿Que es Docker?</h1>
+                <p>Docker es un subsistema de virtualización que comparte con el anfitrión el kernel y el sistema de archiv os. El anfitrión siempre es un sistema L inux. Si estamos en Windows o Mac , necesitaré una máquina virtual Linux virtualizada con VirtualBox o similar.</p>
+                <pre>
+Un software de máquinas virtuales necesita instalar el S.O completo.
+Ejemplos de sistemas de virtualización:
+- VirtualBox(Multiples plataformas)
+- Parallel(Only MAC)
+- Hyper-V(Only Windows)
+- VMWare(Multiples plataformas)
+- QEMU(Only Linux)
+- XVM(Only UNIX/Linux
+- XEN(Only UNIX/Linux       
+                </pre>
+                <pre>
+Un SoftWare de contenedores es un sistema de virtualización que comparte el kernel con 
+el anfitrión. Se basa en el concepto de micr oservicio, donde tengo todos los programas 
+instalados, configu rados y funcionando, gracias a los contenedores. 
+Ejemplo de SoftWare de contenedores:
+- Docker
+- LXD
+- Kubernetes
+                </pre>
+                <div>
+                    <h2>Docker Vs Maquinas Virtuales</h2>
+                    <div id="imagenesd">
+                        <img src="img/d.png" width="500"/>
+                        <img src="img/v.png" width="500"/>
                     </div>
-                </article>
-                <article class="article1">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="img/ssh00.png" alt="" width="145"/>
-                                <h2>SSH</h2>
-                                <p>El SSH es un protocolo cuya principal funcion es el acceso remoto a un servidor.</p>
-                            </div>
-                            <div class="flip-card-back">
-                                <a href="ssh1.html">
-                                    <p>Practica 1</p>
-                                </a>
-                                <a href="ssh2.html">
-                                    <p>Practica 2</p>
-                                </a>
-                            </div>
-                        </div>
+                </div>
+                <div>
+                    <h2>Para saber mas sobre el tema</h2>
+                    <a href="#"><h3>Web Oficial de Docker</h3></a>
+                    <a href="#"><h3>DockerHub (Listado de contenedores)</h3></a>
+                    <a href="#"><h3>Tutorial de Docker</h3></a>
+                </div>
+                <div id="dbloque">
+                    <div id="dockerfile">
+                        <pre>
+<span id="dfile">EJEMPLO DOCKERFILE</span>
+m,m# use phusion/baseimage as base image.
+from ubuntu:latest                                              
+# use baseimage-docker's init system.
+cmd ["/sbin/my_init"]                                           
+                                                                                                    
+# install prerequisites
+run apt-get update; \                 
+                                                                                            
+apt-get install -y udhcpd
+                                                                                            
+# set up start up scripts
+run mkdir /etc/service/udhcpd
+add udhcpd.sh /etc/service/udhcpd/run
+run chmod +x /etc/service/udhcpd/run
+                                                                                                    
+# clean up apt when done.
+run apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+                                                                                                    
+# expose the port
+expose 67
+expose 67/udp
+expose 68
+expose 68/udp
+                                                                                                    
+# volumes
+volume /data
+<span style="border: 1px solid black;border-radius: 3px;background-color: cyan;"><a href="rawdocker.html">Raw Document</a></span>
+                        </pre>
                     </div>
-                </article>
-                <article class="article1">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="img/ftp.png" alt="" width="155"/>
-                                <h2>FTP</h2>
-                                <p>Es un protocolo de red para la transferencia de archivos entre sistemas
-                                    conectados a una red, basado en la arquitectura cliente-servidor</p>
-                            </div>
-                            <div class="flip-card-back">
-                                <a href="ftp.html">
-                                    <p>Practica 1</p>
-                                </a>
-                            </div>
-                        </div>
+                    <div id="dockerm">
+<pre>
+<span id="qdc">QUE ES UN DOCKERFILE?</span>
+<span style="color: rgb(63, 63, 63);font-weight: bold;">Un dockerfile es una receta para crear una imagen para una aplicación 
+particular de docker. de este modo podemos tomar una imagen base, instalarle 
+programas, configurar esos programas y dejarla preparada para crear 
+contenedores a partir de ella</span>
+                            
+Comando from: Buscas la imagen mas reciente de ubuntu con ubuntu:latest
+Comando run: Ejecutas y añades scrip para actualizar el sistema e instalar udhcp
+Comando expose: Abres los puertos 67 y 68
+Comando volume: Comparte una carpeta entre el contenedor de docker y el host (tu ordenador)
+CREAMOS EL ARCHIVO udhcpd.conf
+                            
+# The start and end of the IP lease block
+start	172.17.0.200
+end		172.17.0.210
+                                                            
+# The interface that udhcpd will use
+interface	eth0
+                                                            
+opt	dns	192.168.18.3 8.8.8.8
+option	subnet	255.255.0.0
+ opt	router	172.17.0.1
+# opt	wins	192.168.10.10
+# option	dns	129.219.13.81	# appended to above DNS servers for a total of 3
+option	domain	local
+option	lease	864000		
+                                                            
+CREAR EL CONTENEDOR:
+docker build .
+                                                            
+LANZAR EL CONTENEDOR: 
+docker run -d --net=host -p 67:67 -p 67:67/udp -p 68:68 -p 68:68/udp
+--name=dhcpd -v "RUTA AL DIRECTORIO udhcpd"/data ubuntu:latest
+                                                            
+ABRIR TERMINAL EN CONTENEDOR:
+docker exec -ti NOMBRE_CONTENEDOR /bin/bash
+</pre>
                     </div>
-                </article>
-            </main>
-            <footer>
-                <p>Website Designed by Amir</p>
-            </footer>
+                </div>
+            </div>
+
+            <!--Menu SSH-->
+            <div id="showssh" class="rm">SSH</div>
+            <div class="sshmenu" style="display: none;">
+                EN PROGRESO
+                <p>Links temporales</p>
+                <a href="ssh1.html">ssh practica 1</a>
+                <a href="ssh2.html"> ssh practica 2</a>
+            </div>
+
+            <!-- Menu FTP-->
+            <div id="showftp" class="rm">FTP</div>
+            <div class="ftpmenu" style="display: none;">
+                EN PROGRESO
+
+
+
+
+                <p align="left" style="margin-bottom: 0cm; line-height: 100%">
+                        <b>I</b><b>nstala el servidor vsftpd en la Raspberry Pi con que tenga
+                        las siguientes caracteristicas:</b></p>
+                        <h2 class="western"><a name="__RefHeading___Toc106_316843305"></a>-
+                        Que sea un servidor FTP an&oacute;nimo para descargas.</h2>
+                        <h2 class="western"><a name="__RefHeading___Toc108_316843305"></a><img src="ftp_html_5cc18d7c49c38641.png" name="Imagen4" align="left" width="454" height="51">
+                          <br clear="left"/>
+                        </img>
+                        -
+                        Que sea un servidor FTP para usuarios de sistema y que puedan tanto
+                        descargar como subir archivos.</h2>
+                        <h2 class="western"><a name="__RefHeading___Toc110_316843305"></a><img src="ftp_html_cd22917b3e6f3003.png" name="Imagen3" align="left" width="643" height="319">
+                          <br clear="left"/>
+                        </img>
+                        -
+                        Funcione en modo pasivo.</h2>
+                        <h2 class="western"><a name="__RefHeading___Toc112_316843305"></a><img src="ftp_html_500ed403d10fe9bd.png" name="Imagen5" align="left" width="171" height="74">
+                          <br clear="left"/>
+                        </img>
+                        -
+                        Habilita los logs.</h2>
+                        <h2 class="western"><a name="__RefHeading___Toc114_316843305"></a><img src="ftp_html_ccdab64fd9e53bf4.png" name="Imagen1" align="left" width="643" height="72">
+                          <br clear="left"/>
+                        </img>
+                        -
+                        Cambia el mensaje de bienvenida.</h2>
+                        <p><br/>
+                        <br/>
+                        
+                        </p>
+                        <p><br/>
+                        <br/>
+                        
+                        </p>
+                        <p style="page-break-before: always">Pantallazos:</p>
+                        <h2 class="western">Logs de acceso al servidor FTP.</h2>
+                        <h2 class="western"><img src="ftp_html_638dae36e46e47a.png" name="Imagen6" align="left" width="643" height="398">
+                          <br clear="left"/>
+                        </img>
+                        <img src="ftp_html_89f942836e1e532c.png" name="Imagen2" align="left" width="643" height="234">
+                          <br clear="left"/>
+                        </img>
+                        Pantallazo
+                        que demuestre que se ha cambiado el mensaje de bienvenida.</h2>
+                        <h2 class="western"><br/>
+                        <br/>
+                        
+                        </h2>
+                        <h2 class="western" style="page-break-before: always">Pantallazo del
+                        WireShark que demuestre que esta funcionando en modo pasivo.</h2>
+                        <p><img src="ftp_html_7cff5737c5ed32dd.png" name="Imagen9" align="left" width="643" height="242">
+                          <br clear="left"/>
+                        </img>
+                        <br/>
+                        <br/>
+                        
+                        </p>
+                        <h2 class="western"><img src="ftp_html_4b133f9c32bb96fe.png" name="Imagen7" align="left" width="643" height="261">
+                          <br clear="left"/>
+                        </img>
+                        <img src="ftp_html_6853fe4c8ba12900.png" name="Imagen8" align="left" width="338" height="255">
+                          <br clear="left"/>
+                        </img>
+                        Pantallazo
+                        de acceso en modo consola y en modo gr&aacute;fico.</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
         </div>
-    </body>
+        <!--AQUI TERMINA REDES-->
+        <div class="otra cosa">
+            Click en  docker , ssh , ftp.
+ </div>
+        
+    </div>
+</body> 
 </html>

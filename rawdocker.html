@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<pre>
+m,m# use phusion/baseimage as base image.
+from ubuntu:latest                                              
+# use baseimage-docker's init system.
+cmd ["/sbin/my_init"]                                           
+                                                                                                            
+# install prerequisites
+run apt-get update; \                 
+                                                                                                    
+apt-get install -y udhcpd
+                                                                                                    
+# set up start up scripts
+run mkdir /etc/service/udhcpd
+add udhcpd.sh /etc/service/udhcpd/run
+run chmod +x /etc/service/udhcpd/run
+                                                                                                            
+# clean up apt when done.
+run apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+                                                                                                            
+# expose the port
+expose 67
+expose 67/udp
+expose 68
+expose 68/udp
+                                                                                                            
+# volumes
+volume /data
+</pre>
+</body>
+</html>

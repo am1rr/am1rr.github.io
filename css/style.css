@@ -1,295 +1,246 @@
-* {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box ;
-    -webkit-box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-body {
-    background-color: rgb(7, 4, 4);
-}
-a {
-    text-decoration: none;
-    color: white;
+.container {
+    height: 1200px;
 }
 
-#container {
-    margin: 0 auto;
-    width: 1200px;
-    height: 2500px;
-}
-header {
-    text-align: center;
-    height: 150px;
-    background-color: #222831;
-}
-header img {
-    margin-top: 10px;
-    border: 2px solid darkred;
-    border-radius: 50%;
-}
-.nav-bar-1 {
+.nav-bar {
     position: sticky;
     top: 0px;
-    z-index: 10;
+    float: left;
+    width: 100%;
+    z-index: 9999999;
 }
-.nav-bar-1 ul {
-    text-align: center;
-    background-color:#222831 ;
-    position: sticky;
-    border-bottom: 10px solid #222831 ;
-    border-top: 10px solid #222831 ;
-}
-.nav-bar-1 ul li {
+.nav-bar > div {
     display: inline-block;
+    padding: 35px;
     color: white;
-    background-color:#393e46 ;
-    padding: 5px 30px 5px 30px;
-    border-radius: 5px;
+    font-weight: bold;
 }
-.nav-bar-1 ul li:hover {
-    box-shadow: red 0px 0px 2px 2px;
+.nav-bar > div:hover {
+    border-bottom: 3px solid rgb(86, 86, 255);
+    padding-bottom: 32px;
+    cursor: pointer;
 }
-.deco-img {
-    height: 400px;
-    background-color:#393e46 ;
-    text-align: center;
-    padding-top: 50px;
+header {
+    height: 500px;
+    background-image: url(../img/2.jpg);
+    background-size: cover;
 }
-.deco-img p:nth-child(1) {
-    color: white;
-    font-size: 2.2em;
-    text-shadow: #222831 4px 4px;
+
+
+.networks {
+    margin: 50px;
+    height: 100px;
 }
-.deco-img p:nth-child(2) {
-    color: white;
-    font-size: 1.8em;
-    text-shadow: #222831 4px 4px;
-    margin: 20px 180px 20px 180px;
+.networks h1 {
+    font-size: 2rem;
 }
-.deco-img pre {
-    color: white;
-    font-size: 1em;
-    text-align: left;
-    text-shadow: #222831 4px 4px;
-    width: 500px;
-    margin-left: 50px;
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: gray;
+}
+
+.rm {
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.rm:hover {
+    border-bottom: 3px solid rgb(86, 86, 255);
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+
+/* Menu DOCKER */
+#showdocker {
     float: left;
 }
-
-
-main {
-    background-color: #00adb5;
-    height: 1800px;
-    padding: 50px;
-}
-
-/*.articulo1 {
-    float: left;
-    border: 1px solid black;
-    width: 250px;
-    height: 300px;
-    margin: 10px;
-    border-radius: 20px;
-    background-color:#222831 ;
-}*/
-
-.article1 {
-    float: left;
-    margin: 30px;
-}
-.flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 350px;
-    perspective: 1000px;
-    
-}
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 10px;
-}
-  
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-  
-.flip-card-front, .flip-card-back {
+.dockermenu {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-}
-  
-.flip-card-front {
+    left: 50px;
+    top: 650px;
+    height: 1550px;
+    width: 95%;
+    background-image: url(../img/docker.jpg);
+    background-size: cover;
     text-align: center;
-    background-color: #bbb;
-    color: black;
-    border-bottom: 10px solid #222831;
 }
-.flip-card-front h2 {
-    padding: 5px;
-    color:#222831 ;
+#qdc {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
-.flip-card-front p {
-    padding: 5px;
-    color:#222831 ;
-    font-weight: bold;
-    background-color: rgb(114, 114, 114);
-}
-.flip-card-back {
-    text-align: center;
-    background-color: #222831;
-    color: black;
-    transform: rotateY(180deg);
-    border-bottom: 10px solid #bbb;
-}
-.flip-card-back h2 {
-    padding: 5px;
-    color:#222831 ;
-    font-weight: bold;
-}
-.flip-card-back p {
-    padding: 5px;
-    color:white ;
-    font-weight: bold;
-    background-color: #00adb5;
-    float: left;
-    padding: 10px;
-    width: 175px;
-    border-radius: 10px;
-    position: relative;
-    left: 65px;
-    margin-top: 50px;
-}
-.flip-card-back p:hover {
-    box-shadow: white 0px 0px 2px 2px ;
-}
-footer {
-    background-color: #eeeeee;
-    height: 80px;
-    padding-top: 20px;
-}
-
-footer p:nth-child(1) {
-    background-color: rgb(165, 165, 165);
-    padding: 10px;
-    float: left;
-    margin-left: 20px;
-}
-
-.docker-main {
-    background-color: #00adb5;
-    height: 1800px;
-    padding: 50px;
-}
-.docker-main h3 {
-    font-size: 1.5em;
-    color: #222831;
-    text-align: center;
-    font-weight: bold;
-}
-.docker-main .seccion1 {
-    text-align: center;
-    height: 90px;
-    background-color: #222831;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+.dockermenu h1 {
     color: white;
-    padding: 5px;
+    font-size: 3rem;
 }
-.docker-main .seccion1 p {
-    margin-top: 5px;
-}
-.docker-main .seccion1 p:hover {
-    color: #00adb5;
-    text-decoration-line: underline;
-}
-#curs {
-    font-style: oblique;
-}
-.docker-main .seccion2 pre:nth-of-type(1) {
-    background-color: rgb(206, 206, 206);
-    padding-left: 20px;
-}
-.docker-main .seccion2 pre:nth-of-type(2) {
-    padding-left: 20px;
-    background-color: rgb(173, 173, 173);
-    border-bottom-left-radius:10px ;
-    border-bottom-right-radius:10px ;
-}
-
-.bold {
-    font-weight: bold;
-}
-.ssh1-main {
-    background-color: #00adb5;
-    height: 1100px;
-    padding: 50px;
-}
-.ssh1-main .ssh1-dia {
-    float: left;
-    width: 500px;
-    height: 325px;
-    border-radius: 10px;
-    margin: 10px 25px 10px 25px;
-    text-align: center;
-    background-color:rgb(173, 173, 173) ;
-    box-shadow: 4px 4px #222831;
-}
-.ssh1-main .ssh1-dia h2, .ssh1-main .ssh1-dia p {
-    background-color: #222831;
+.dockermenu p{
     color: white;
-}
-.ssh1-main .ssh1-dia h2 {
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    padding-top: 5px;
-}
-.ssh1-main .ssh1-dia p:nth-of-type(2) {
-    color: #00adb5;
-    
-}
-
-.ssh2-main .ssh1-dia img {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.5rem;
     margin-top: 20px;
 }
-#imagen:hover {
-    filter: brightness(120%);
-}
-.ssh2-main {
-    background-color: #00adb5;
-    height: 1500px;
-    padding: 50px;
-}
-.ssh2-main .ssh1-dia {
+.dockermenu pre {
     float: left;
-    width: 500px;
-    height: 325px;
-    border-radius: 10px;
-    margin: 10px 25px 10px 25px;
-    text-align: center;
-    background-color:rgb(173, 173, 173) ;
-    box-shadow: 4px 4px #222831;
+    text-align: left;
+    font-size: 1rem;
+    margin-left: 50px;
+    margin-top: 50px;
 }
-.ssh2-main .ssh1-dia h2, .ssh2-main .ssh1-dia p {
-    background-color: #222831;
-    color: white;
+.dockermenu h2 {
+    clear: both;
+    font-weight: bold;
+    font-size: 1.4rem;
 }
-.ssh2-main .ssh1-dia h2 {
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    padding-top: 5px;
+#imagenesd {
+    margin-top: 50px;
+    width: 90%;
+    margin: auto;
 }
-.ssh2-main .ssh1-dia p:nth-of-type(2) {
-    color: #00adb5;
+#dbloque {
+    height: 600px;
+}
+#dfile {
+    font-weight: bold;
+}
+#dockerfile {
+    margin: 20px;
+    height: 550px;
+    float: left;
+    width: 35%;
+}
+#dockerm {
+    float: left;
+    margin: 20px;
+    height: 550px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* menu ssh */
+
+
+#showssh {
+    float: left;
+}
+.sshmenu {
+    position: absolute;
+    left: 50px;
+    top: 650px;
+    border: 1px solid black;
+    height: 1800px;
+    width: 95%;
+    background-color: yellow;
+}
+
+
+
+
+
+/* menu ftp */ 
+
+#showftp {
+    float: left;
+}
+.ftpmenu {
+    position: absolute;
+    left: 50px;
+    top: 650px;
+    border: 1px solid black;
+    height: 1800px;
+    width: 95%;
+    background-color: rgb(204, 204, 204);
+}
+.otra {
+    clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERIES
+and (orientation: landscape)*/
+@media only screen and (min-width: 1450px) {
+    .container {
+        /* header y nav bar */
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+/* Greater than standard 1200px Extra Large */
+@media only screen and (min-width: 1201px) {
+ 
+}
+/*Between 993px and 1200px Large*/
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
     
+}
+/*Between 768px and 992px Medium*/
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    /* header y nav bar */
+    header {
+        height: 400px;
+    }
+}
+/*Between 576px and 767px Small*/
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    /* header y nav bar */
+    header {
+        height: 250px;
+    }
+    .nav-bar > div{
+        font-size: 1rem;
+        padding: 17px;
+    }
+    .nav-bar {
+        text-align: center;
+    }
+    .nav-bar > div:hover {
+        border-bottom: 3px solid rgb(86, 86, 255);
+        padding-bottom: 14px;
+    }
+
+}
+/*Smaller than 576px Extra Small */
+@media only screen and (max-width: 576px) {
+    /* header y nav bar */
+    header {
+        height: 220px;
+    }
+    .nav-bar > div{
+        font-size: 1rem;
+        padding: 17px;
+    }
+    .nav-bar {
+        text-align: center;
+    }
+    .nav-bar > div:hover {
+        border-bottom: 3px solid rgb(86, 86, 255);
+        padding-bottom: 14px;
+    }
+
 }
