@@ -224,6 +224,14 @@ and (orientation: landscape)*/
         padding-bottom: 14px;
     }
 
+
+    /*docker menu */
+    .dockermenu {
+        top: 400px;
+        width: 100%;
+        left: 0px;
+    }
+
 }
 /*Smaller than 576px Extra Small */
 @media only screen and (max-width: 576px) {
@@ -241,6 +249,15 @@ and (orientation: landscape)*/
     .nav-bar > div:hover {
         border-bottom: 3px solid rgb(86, 86, 255);
         padding-bottom: 14px;
+    }
+
+
+
+    /*docker menu */
+    .dockermenu {
+        top: 400px;
+        width: 100%;
+        left: 0px;
     }
 
 }
