@@ -159,8 +159,6 @@ a {
     font-weight: bold;
 }
 /* articulo docker */
-.docker-articulo {
-    }
 .docker-articulo ul {
     margin-left: 20px;
     color: black;
@@ -259,11 +257,12 @@ and (orientation: landscape)*/
     .nav-bar div {
         font-size: 2.5vw;
     }
-
-    /* Portfolio*/
-    /*main content*/
-
+    .isocialmedia {
+        position: relative;
+        bottom: 85px;
     }
+
+}
 
     /*Between 576px and 767px Small*/
 @media only screen and (min-width: 577px) and (max-width: 768px) {
@@ -278,10 +277,12 @@ and (orientation: landscape)*/
     .nav-bar div {
         font-size: 3vw;
     }
-
-    /*main content*/
-
+    .isocialmedia {
+        position: relative;
+        bottom: 105px;
     }
+
+}
 
 /*Smaller than 576px Extra Small */
 @media only screen and (max-width: 576px) {
@@ -296,10 +297,12 @@ and (orientation: landscape)*/
     .nav-bar div {
         font-size: 3vw;
     }
-/* Portfolio*/
-/*navbar*/
     .header-zona-3 div {
         padding: 14px;
         font-size: 0.78em;
+    }
+    .isocialmedia {
+        position: relative;
+        bottom: 85px;
+    }
 }
-    
