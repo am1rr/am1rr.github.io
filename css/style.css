@@ -1,172 +1,253 @@
-.container {
-    height: 1200px;
+/*General*/
+body {
+    font-family: 'Antic';
 }
-
-.nav-bar {
-    position: sticky;
-    top: 0px;
-    float: left;
-    width: 100%;
-    z-index: 9999999;
-}
-.nav-bar > div {
-    display: inline-block;
-    padding: 35px;
-    color: white;
-    font-weight: bold;
-}
-.nav-bar > div:hover {
-    border-bottom: 3px solid rgb(86, 86, 255);
-    padding-bottom: 32px;
-    cursor: pointer;
-}
-header {
-    height: 500px;
-    background-image: url(../img/2.jpg);
-    background-size: cover;
-}
-
-
-.networks {
-    margin: 50px;
-    height: 100px;
-}
-.networks h1 {
-    font-size: 2rem;
-}
-
 a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
-a:hover {
-    color: gray;
-}
-
-.rm {
-    padding: 15px;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-.rm:hover {
-    border-bottom: 3px solid rgb(86, 86, 255);
-    padding-bottom: 20px;
-    cursor: pointer;
+* {
+    box-sizing: border-box;
 }
 
 
-/* Menu DOCKER */
-#showdocker {
-    float: left;
-}
-.dockermenu {
-    position: absolute;
-    left: 0px;
-    top: 650px;
-    height: 1550px;
-    width: 100%;
-    background-image: url(../img/docker.JPG);
+
+/* CSS Pagina Principal */
+.ibody { 
+    background: url(../img/back.gif) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     text-align: center;
+  }
+.iheader div h1 {
+    margin-top: 250px;
+    color: rgb(255, 255, 255);
+    font-family: 'Antic';
+    letter-spacing: 2px;
+    font-weight: 100;
+    font-size: 6vw;
 }
-#qdc {
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-.dockermenu h1 {
+.iheader p {
     color: white;
-    font-size: 3rem;
+    font-family: 'Antic';
+    width: 40%;
+    margin: 20px auto;
+    font-size: 1.2vw;
+    letter-spacing: 1.5px;
+    line-height: 1.5em;
 }
-.dockermenu p{
+.nav-bar div {
+    display: inline-block;
+    padding: 15px;
+    font-size: 1.1vw;
+    letter-spacing: 1.7px;
+}
+.nav-bar div:hover {
+    border-bottom: 2px solid rgb(141, 0, 0);
+    padding-bottom:10px;
+}
+.isocialmedia {
+    margin-top: 250px;
+}
+.isocialmedia img:hover {
+    box-shadow: 0px 0px 6px red;
+}
+
+
+/* CSS Portfolio */
+.container {
+    height: 122vw;
+}
+.header-zona-1 {
+    height: 35px;
+    background-image: url(../img/banner.png);
+    background-size: cover;
     color: white;
-    width: 50%;
-    margin: 0 auto;
-    font-size: 1.5rem;
-    margin-top: 20px;
+    padding: 5px;
 }
-.dockermenu pre {
-    float: left;
-    text-align: left;
-    font-size: 1rem;
-    margin-left: 50px;
-    margin-top: 50px;
-}
-.dockermenu h2 {
-    clear: both;
+ .header-zona-2 {
+    height: 100px;
     font-weight: bold;
-    font-size: 1.4rem;
+    padding: 25px;
 }
-#imagenesd {
-    margin-top: 50px;
-    width: 90%;
-    margin: auto;
+.header-zona-2 p:nth-of-type(1) {
+    font-size: 1.75em;
 }
-#dbloque {
+.header-zona-2 p {
+    margin: 5px;
+}
+
+.header-zona-2 .socialmedia{
+    text-align: right;
+    float: right;
+}
+.header-zona-3 {
+    height: 50px;
+    background-color: #000228;
+    color: white;
+    text-align: center;
+    position: sticky;
+    top: 0px;
+}
+.header-zona-3 div {
+    display: inline-block;
+    padding: 15px;
+    font-size: 1.2em;
+    letter-spacing: 1.5px;
+}
+.header-zona-3 div:hover {
+    background-color: red;
+}
+
+
+/* artiuculos */
+.main-content {
+    width: 75%;
+    margin: 20px auto;
+}
+.zona-articulos {
     height: 600px;
+        /*border: 1px solid black;*/
+    float: left;
+    width: 70%;
 }
-#dfile {
+.menu-articulos {
+    height: 600px;
+    width: 30%;
+    border: 1px solid black;
+    float: left;
+    padding: 20px;
+    background-color: white;
+}
+.social {
+    border-top: 5px solid #000228;
+    border-bottom: 5px solid #000228;
+    padding: 10px;
+}
+.social p {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.secciones p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    font-size: 1.4em;
+}
+.s-redes h2 {
+    font-weight: bold;
+    letter-spacing: 0.2px;
+}
+.s-redes {
+    text-align: center;
+}
+
+.s-redes-items {
+    float: left;
+    width: 58px;
+    height: 58px;
+    margin: 5px;
+    border: 1px solid #d1d1d1;
+}
+.s-redes-items:hover {
+    box-shadow: 0px 0px 6px rgb(117, 0, 0);
+}
+.pages {
+    display: none;
+}
+
+
+
+.bold {
     font-weight: bold;
 }
-#dockerfile {
-    margin: 20px;
-    height: 550px;
-    float: left;
-    width: 35%;
+/* articulo docker */
+.docker-articulo {
+    
 }
-#dockerm {
-    float: left;
-    margin: 20px;
-    height: 550px;
+.docker-articulo ul {
+    margin-left: 20px;
+    color: black;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* menu ssh */
-
-
-#showssh {
-    float: left;
+.docker-articulo p {
+    margin-top: 5px;
+    text-align: left;
 }
-.sshmenu {
-    position: absolute;
-    left: 50px;
-    top: 650px;
-    border: 1px solid black;
-    height: 1800px;
-    width: 95%;
-    background-color: yellow;
+.docker-articulo h2 {
+    font-size: 2em;
+    color: rgb(117, 0, 0);
+    text-align: center;
+}
+.docker-articulo h3 {
+    font-size:1.25em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(117, 0, 0);
+}
+.docker-articulo ul li a {
+    color: blue;
+    text-decoration: underline;
+}
+.docker-articulo ul li a:hover {
+    color: red;
 }
 
 
-
-
-
-/* menu ftp */ 
-
-#showftp {
-    float: left;
+/* Articulo SSH */
+.ssh-articulo h2 {
+    font-size: 2em;
+    color: rgb(117, 0, 0);
+    text-align: center;
 }
-.ftpmenu {
-    position: absolute;
-    left: 50px;
-    top: 650px;
-    border: 1px solid black;
-    height: 1800px;
-    width: 95%;
-    background-color: rgb(204, 204, 204);
+.ssh-articulo p {
+    margin-top: 5px;
+    text-align: left;
 }
-.otra {
+.ssh-articulo h3 {
+    font-size:1.25em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(117, 0, 0);
+}
+.ssh-articulo h4 {
+    font-size:1.1em;
+    color: #000228;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer {
+    z-index: 999;
+    height: 100px;
     clear: both;
-}
+    background-color: #000228;
+    position: relative;
+    bottom: -1225px;
+
+
+
+
+
+
+
 
 
 
@@ -184,83 +265,88 @@ a:hover {
 
 /*MEDIA QUERIES
 and (orientation: landscape)*/
-@media only screen and (min-width: 1450px) {
-    .container {
-        /* header y nav bar */
-        max-width: 90%;
-        margin: 0 auto;
-    }
-}
 /* Greater than standard 1200px Extra Large */
 @media only screen and (min-width: 1201px) {
- 
-}
-/*Between 993px and 1200px Large*/
-@media only screen and (min-width: 993px) and (max-width: 1200px) {
     
 }
+
+/*Between 993px and 1200px Large*/
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+   /* Inicio */
+   .iheader div h1 {
+        font-size: 7vw;
+    }
+    .iheader p {
+        font-size: 1.5vw;
+        width: 70%;
+    }
+    .nav-bar div {
+        font-size: 1.7vw;
+    }
+     /* Portfolio*/
+     
+}
+
 /*Between 768px and 992px Medium*/
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-    /* header y nav bar */
-    header {
-        height: 400px;
+    /* Inicio */
+    .iheader div h1 {
+        font-size: 12vw;
     }
+    .iheader p {
+        font-size: 3vw;
+    }
+    .nav-bar div {
+        font-size: 3vw;
+    }
+
+
+    /* Portfolio*/
+    /*main content*/
+    
+   
 }
+
 /*Between 576px and 767px Small*/
-@media only screen and (min-width: 577px) and (max-width: 768px) {
-    /* header y nav bar */
-    header {
-        height: 250px;
+@media only screen and (min-width: 577px) and (max-width: 768px)  {
+    /* Inicio */
+    .iheader div h1 {
+        font-size: 12vw;
     }
-    .nav-bar > div{
-        font-size: 1rem;
-        padding: 17px;
+    .iheader p {
+        font-size: 3vw;
+        width: 75%;
     }
-    .nav-bar {
-        text-align: center;
-    }
-    .nav-bar > div:hover {
-        border-bottom: 3px solid rgb(86, 86, 255);
-        padding-bottom: 14px;
+    .nav-bar div {
+        font-size: 3vw;
     }
 
-
-    /*docker menu */
-    .dockermenu {
-        top: 400px;
-        width: 100%;
-        left: 0px;
-    }
-    .dockermenu pre {
-        font-size: 1rem;
-    }
-
+    /*main content*/
+    
+    
 }
+
 /*Smaller than 576px Extra Small */
-@media only screen and (max-width: 576px) {
-    /* header y nav bar */
-    header {
-        height: 220px;
+@media only screen and (max-width: 576px)  {
+    /* Inicio */
+    .iheader div h1 {
+        font-size: 12vw;
     }
-    .nav-bar > div{
-        font-size: 1rem;
-        padding: 17px;
+    .iheader p {
+        font-size: 3vw;
+        width: 70%;
     }
-    .nav-bar {
-        text-align: center;
+    .nav-bar div {
+        font-size: 3vw;
     }
-    .nav-bar > div:hover {
-        border-bottom: 3px solid rgb(86, 86, 255);
-        padding-bottom: 14px;
-    }
-    /*docker menu */
-    .dockermenu {
-        top: 400px;
-        width: 100%;
-        left: 0px;
-    }
-    .dockermenu pre {
-        font-size: 1.2rem;
-    }
+    /* Portfolio*/
+     /*navbar*/
+     .header-zona-3 div {
+        padding: 14px;
+        font-size: 0.78em;
+     }
+
+     /*main content*/
+     
 
 }

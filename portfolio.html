@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="shortcut icon" type="image/x-icon" href="img/title.ico"/>
+        <title>Portfolio</title>
+        <link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <script type="text/javascript" src="js/date_time.js"></script>
+        <!--OTRO SCRIPT PA EL SWITCHING-->
+        
+    </head>
+    <body>
+        <!--Scripts-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <div class="container">
+         <script>
+            $(document).ready(function () {
+            //$(".pages").hide();
+            $("#navigationMenu a").click(function (e) {
+                e.preventDefault();
+                var item = this.href.split("#")[1];
+                $(".pages:visible").slideUp(function () {
+                     $("#" + item).slideDown();
+                });
+             });
+             $("#articulo1").show();
+            });         
+         </script>
+        <!--HEADER-->
+            <div class="header-zona-1">
+                <span id="date_time"></span>
+                <script type="text/javascript">
+                    window.onload = date_time('date_time');
+                </script>
+            </div>
+            <div class="header-zona-2">
+                <p>AMIR KHALILOV</p>
+                <div class="socialmedia">
+                    <img src="img/w.png" width="35"/>
+                    <img src="img/fb.png" width="35"/>
+                    <img src="img/is.png" width="35"/>
+                    <img src="img/tw.png" width="35"/>
+                </div>
+                <p style="font-style: oblique;">Portfolio de Trabajos</p>
+            </div>
+            <nav class="header-zona-3">
+                <div><a href="index.html">Inicio</a></div>
+                <div>Docker</div>
+                <div>Redes</div>
+                <div>SSH</div>
+                <div>Telnet</div>
+                <div>Websites</div>
+            </nav>
+            <!--TERMINA HEDAER-->
+            <!--PRINCIAPL-->
+            <div class="main-content">
+                <!--ARTICULOS-->
+                <div class="zona-articulos" id="content">
+                    <div id="articulo1" class="pages">
+                        <div class="docker-articulo">
+                            <h2>¿Que es Docker?</h2>
+                            <p>
+                                Docker es un Subsistema de virtual
+                                ización que comparte con el anfritión
+                                el Kernel y el sistema de archivos .El
+                                anfitrión siempre es un sistema Linux.
+                                Si estamos en Windows o Mac, necestaré u
+                                na maquina virtualizada con VirtualBox o similar.  
+                            </p>
+                            <p>
+                                Un software de máquinas virtuales necesita instalar el sistema operativo completo. 
+                                Ejemplos de sistemas de virtualización.
+                            </p>
+                            <ul>
+                                <li>◼ VirtualBox</li>
+                                <li>◼ Hyper-V (Windows)</li>
+                                <li>◼ Parallels (MAC)</li>
+                                <li>◼ VMWare (Multiples plataformas)</li>
+                                <li>◼ QEMU (Linux)</li>
+                                <li>◼ XEN (Linux/UNIX)</li>
+                                <li>◼ KVM (Linux/UNIX)</li>
+                            </ul>
+                            <p>Un software de contenedores es un sistema 
+                                de virtualización que comparte el Kernel 
+                                con el anfitrión. Se basa en el concepto 
+                                de microservicio, donde tengo todos los 
+                                programas instalados, configurados y 
+                                funcionando, gracias a los contenedores. 
+                                Ejemplo se software de contenedores.</p>
+                            <ul>
+                                <li>◼ LXD (Linux)</li>
+                                <li>◼ Docker</li>
+                                <li>◼ Kubernetes</li>
+                            </ul>
+                            <figure>
+                                <img src="https://i2.wp.com/www.docker.com/blog/wp-content/uploads/Blog.-Are-containers-..VM-Image-1-1024x435.png?ssl=1" width="80%">
+                                <figcaption>Docker vs VirtualBox</figcaption>
+                            </figure>
+                            <p>Para saber mas sobre el Tema:</p>
+                            <ul>
+                                <li>
+                                    <a href="https://www.docker.com/" target="_blank">Web oficial de docker</a>
+                                </li>
+                                <li>
+                                    <a href="https://hub.docker.com/" target="_blank">Docker hub</a>
+                                </li>
+                                <li>
+                                    <a href="https://docs.docker.com/" target="_blank">Tutorial de Docker</a>
+                                </li>
+                                </ul>
+                                <h2>Dockerfiles, ¿Que son?</h2>
+                                <p>Un dockerfile es una receta para crear u
+                                    na imagen para una de aplicación particula
+                                    r de Docker. De este modo podemos tomar una i
+                                    magen base, instalarle programas, configurar e
+                                    sos programas y dejarla preparada para crear con
+                                    tenedores a partir de ella</p>
+                                <h3>Ejemplo Dockerfile</h3>
+                                <ul>
+                                    <li># use phusion/baseimage as base image.</li>
+                                    <li><span class="bold">from</span> Ubuntu:latest</li>
+                                    <li># use baseimage-docker's init system.</li>
+                                    <li>cmd ["/sbin/my_init"]</li>
+                                    <li># install prerequisites</li>
+                                    <li>run apt-get update; \</li>
+                                    <li>apt-get install -y udhcpd</li>
+                                    <li># set up start up scripts</li>
+                                    <li><span class="bold">run</span> mkdir /etc/service/udhcpd</li>
+                                    <li>add udhcpd.sh /etc/service/udhcpd/run</li>
+                                    <li>run chmod +x /etc/service/udhcpd/run</li>
+                                    <li># clean up apt when done.</li>
+                                    <li>run apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*</li>
+                                    <li># expose the port</li>
+                                    <li><span class="bold">expose</span> 67</li>
+                                    <li>expose 67/udp</li>
+                                    <li>expose 68</li>
+                                    <li>expose 68/udp</li>
+                                    <li># volumes</li>
+                                    <li><span class="bold">volume</span> /data</li>
+                                </ul>
+                                <p>Comando <span class="bold">from</span>: Buscas la imagen mas reciente de ubuntu con ubuntu:latest</p>
+                                <p>Comando <span class="bold">run</span>: Ejecutas y añades scrip para actualizar el sistema e instalar udhcp</p>
+                                <p>Comando <span class="bold">expose</span>: Abres los puertos 67 y 68</p>
+                                <p>Comando <span class="bold">volume</span>: Comparte una carpeta entre el contenedor de docker y el host</p>
+                        </div>
+                    </div>
+                    <div id="articulo2" class="pages">
+                        <div class="ssh-articulo">
+                            <h2>¿Que es el SSH?</h2>
+                            <p>SSH o Secure Shell, es un protocolo d
+                                e administración remota que le permite
+                                 a los usuarios controlar y modificar s
+                                 us servidores remotos a través de Inter
+                                 net a través de un mecanismo de autenticación.</p>
+                            <p>
+                                    Proporciona un mecanismo 
+                                    para autenticar un usuario rem
+                                    oto, transferir entradas desde el c
+                                    liente al host y retransmitir la salid
+                                    a de vuelta al cliente. El servicio se creó
+                                     como un reemplazo seguro para el Telnet sin
+                                      cifrar y utiliza técnicas criptográficas par
+                                      a garantizar que todas las comunicaciones hac
+                                      ia y desde el servidor remoto sucedan de manera encriptada.
+                            </p>
+                            <h3>Instalamos el servidor SSH en Linux y comprobamos que se escucha el puerto 22.</h3>
+                            <h4>sudo nmap -sU --top-ports 1000 scanme.nmap.org</h4>
+                            <img src="img/ssh/ssh1.png" width="400">
+                            <h3>Crear dos usuarios denominados usuario1 y usuario2.</h3>
+                            <h4>ssudo useradd -m -d /home/alumno1 alumno1 -s /bin/bash</h4>
+                            <img src="img/ssh/ssh2.png" width="400">
+                            <h3>Cambiar de puerto del servidor e intentar acceder de nuevo</h3>
+                            <h4>Port 2222</h4>
+                            <img src="img/ssh/ssh3.png" width="400">
+                            <h3>Cambiar configuracion del servidor para acceder con el usr1 y no con el usr2</h3>
+                            <h4>AllowUsers alumno2 , DenyUsers alumno2</h4>
+                            <img src="img/ssh/ssh4.png" width="400">
+                            <h3>Intentamos acceder</h3>
+                            <h4>ssh alumno2@192.168.18.210</h4>
+                            <img src="img/ssh/ssh5.png" width="400">
+                            <h3>Cambiamos la configuracion para que solo pueda acceder una Ip determinada</h3>
+                            <h4>AllowIP 192.168.18.247</h4>
+                            <img src="img/ssh/ssh6.png" width="400">
+                            <h3>Buscamos el paquete del SSH dentro de WireShark y comprobaremos que esta encriptado</h3>
+                            <h4>Efectivamente, está Encriptado</h4>
+                            <img src="img/ssh/ssh7.png" width="400">
+                        </div>
+                    </div>
+                    <div id="articulo3" class="pages">
+                          <div>
+
+                          </div>
+                    </div>
+                    <div id="articulo4" class="pages">
+                        <div class="ssh-articulo">
+                            <h2>¿Que es Telnet?</h2>
+                            <p>Telnet es una herramienta que ha sido 
+                                utilizada durante décadas por los administr
+                                adores de sistema informáticos en el ámbito de l
+                                as redes. Las conexiones remotas no son algo precis
+                                amente nuevo, ya desde las primeras redes y con sistem
+                                as sin escritorio se utilizaban herramientas como Telnet
+                                 para conectarnos a servidores y equipos conectados a una 
+                                 red, tanto de forma remota como interna</p>
+                            <h3>Instalamos Telnet mediante el siguiente comando</h3>
+                            <h4>sudo apt install telnetd</h4>
+                            <img src="img/telnet/t1.png" width="400">
+                            <h3>Despues ejecutamos el siguiente comando para iniciar el servidor Telnet</h3>
+                            <h4>sudo /etc/init.d/openbsd-inetd restart</h4>
+                            <img src="img/telnet/t2.png" width="400">
+                            <h3>Comprobamos que el servicio de Telnet esta funcionando con un</h3>
+                            <h4>snmap localhost</h4>
+                            <img src="img/telnet/t3.png" width="400">
+                            <h3>Cuando lo tengamos ejecutado nos conoectaremos con el comando (192.168.18.210 es la Ip de la Raspberry)</h3>
+                            <h4>telnet 192.168.18.210</h4>
+                            <img src="img/telnet/t4.png" width="400">
+                            <h3>Ejecutamos algunos comandos desde Telnet y vamos al wireshark a analizar trafico</h3>
+                            <h4>Buscamos el paquete y hacemos Click en Follow TCP Stream (Podemos ver que no va encriptado)</h4>
+                            <img src="img/telnet/t5.png" width="400">
+                        </div>
+                    </div>
+                    <div id="articulo5" class="pages">
+                          <div>
+
+                          </div>
+                    </div>
+
+                </div>
+                <!--MEMU-->
+                <div class="menu-articulos">
+                    <div class="social">
+                        <p>REDES SOCIALES</p>
+                        <img src="img/wb.png" width="40"/>
+                        <img src="img/fbb.png" width="40"/>
+                        <img src="img/isb.png" width="40"/>
+                        <img src="img/twb.png" width="40"/>
+                    </div>
+                    <div class="secciones">
+                        <p>SECCIONES</p>
+                        <div class="s-redes" id="navigationMenu">
+                            <h2>REDES</h2>
+                            <div class="s-redes-items">
+                                <a href="#articulo1"><img src="img/docker.jpg" width="55px"></a>
+                            </div>
+                            <div class="s-redes-items">
+                                <a href="#articulo2"><img src="img/ssh.jpg" width="55px"></a>
+                            </div>
+                            <div class="s-redes-items">
+                                <a href="#articulo3"><img src="img/ftp.jpg" width="55px"></a>
+                            </div>
+                            <div class="s-redes-items">
+                                <a href="#articulo4"><img src="img/telnet.jpg" width="55px"></a>
+                            </div>
+                            <div class="s-redes-items">
+                                <a href="#articulo5"><img src="img/http.jpg" width="55px"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--TEMRINA MAIN ACONTENCT-->
+            <footer>
+                <p style="color: white;">best portfolio atm</p>
+            </footer>
+        </div>
+        
+        
+    </body>
+</html>
