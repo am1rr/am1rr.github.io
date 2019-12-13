@@ -167,17 +167,20 @@ a {
 .docker-articulo p {
     margin-top: 5px;
     text-align: left;
+    font-size: 1.25em;
 }
 .docker-articulo h2 {
     font-size: 2em;
     color: rgb(117, 0, 0);
     text-align: center;
+    
 }
 .docker-articulo h3 {
     font-size: 1.25em;
     margin-top: 5px;
     margin-bottom: 5px;
     color: rgb(117, 0, 0);
+    font-weight: bold;
 }
 .docker-articulo ul li a {
     color: blue;
@@ -196,12 +199,14 @@ a {
 .ssh-articulo p {
     margin-top: 5px;
     text-align: left;
+    font-size: 1.2em;
 }
 .ssh-articulo h3 {
     font-size: 1.25em;
     margin-top: 5px;
     margin-bottom: 5px;
     color: rgb(117, 0, 0);
+    font-weight: bold;
 }
 .ssh-articulo h4 {
     font-size: 1.1em;
@@ -217,7 +222,7 @@ footer {
     clear: both;
     background-color: #000228;
     position: relative;
-    bottom: -1225px;
+    bottom: -1438px;
 }
 /*    /*MEDIA QUERIES
 and (orientation: landscape)*/
@@ -230,17 +235,21 @@ and (orientation: landscape)*/
 /*Between 993px and 1200px Large*/
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
 /* Inicio */
-.iheader div h1 {
-    font-size: 7vw;
-}
-.iheader p {
-    font-size: 1.5vw;
-    width: 70%;
-}
-.nav-bar div {
+    .iheader div h1 {
+        font-size: 7vw;
+    }
+    .iheader p {
+        font-size: 1.5vw;
+        width: 70%;
+    }
+    .nav-bar div {
     font-size: 1.7vw;
         }
-/* Portfolio*/
+
+
+
+
+    /* Portfolio*/
 
 }
 
@@ -262,6 +271,14 @@ and (orientation: landscape)*/
         bottom: 85px;
     }
 
+
+
+
+
+
+
+
+    /*Portfolio responsive */
 }
 
     /*Between 576px and 767px Small*/
@@ -282,6 +299,10 @@ and (orientation: landscape)*/
         bottom: 105px;
     }
 
+
+
+
+    /*Portfolio responsive */
 }
 
 /*Smaller than 576px Extra Small */
@@ -305,4 +326,9 @@ and (orientation: landscape)*/
         position: relative;
         bottom: 85px;
     }
+
+
+
+
+    /*Portfolio responsive */ 
 }

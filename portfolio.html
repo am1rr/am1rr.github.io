@@ -191,8 +191,45 @@
                         </div>
                     </div>
                     <div id="articulo3" class="pages">
-                          <div>
-
+                          <div class="ssh-articulo">
+                            <h2>¿Que es el FTP?</h2>
+                            <p>El Protocolo de transferencia de archivos (en inglés F
+                                ile Transfer Protocol o FTP) es un protocolo de red para la
+                                 transferencia de archivos entre sistemas conectados a una r
+                                 ed TCP (Transmission Control Protocol), basado en la arquite
+                                 ctura cliente-servidor. </p>
+                            <p>
+                                Desde un equipo cliente se puede conectar a un servidor para descargar archivos desde él o para enviarle archivos, independientemente del sistema operativo utilizado en cada equipo. 
+                                El servicio FTP es ofrecido por la capa de aplicación del modelo 
+                                de capas de red TCP/IP al usuario, utilizando normalmente el puert
+                                o de red 20 y el 21
+                            </p>
+                            <p>En esta guia vamos a configurar un servidor FTP</p>
+                            <h3>Habilitamos el modo Anonimo</h3>
+                            <h4>anonymous_enable=yes</h4>
+                            <img src="img/ftp/f1.png" width="400">
+                            <h3>Habilitamos las opciones para usuarios del Sistema y para que pueda descargar y subir</h3>
+                            <h4>local_enable=YES</h4>
+                            <h4>write_enable=YES</h4>
+                            <img src="img/ftp/f2.png" width="400">
+                            <h3>Habilitamos el modo pasivo</h3>
+                            <h4>passive</h4>
+                            <img src="img/ftp/f3.png" width="400">
+                            <h3>Habilita los logs</h3>
+                            <h4>xferlog_file=/far/log/vsftpd.log</h4>
+                            <img src="img/ftp/f4.png" width="400">
+                            <h3>Screenshoot logs</h3>
+                            <h4>Screenshoot here</h4>
+                            <img src="img/ftp/f5.png" width="400">
+                            <h3>Cambios el mensaje de bienvenida</h3>
+                            <h4>Screenshoot here</h4>
+                            <img src="img/ftp/f6.png" width="400">
+                            <h3>Abrimos WireShark y comprobamos que esta funcionando en modo pasivo</h3>
+                            <h4>Screenshoot here</h4>
+                            <img src="img/ftp/f7.png" width="400">
+                            <h3>Pantallazo Acceso modo grafico</h3>
+                            <h4>Screenshoot here</h4>
+                            <img src="img/ftp/f8.png" width="400">
                           </div>
                     </div>
                     <div id="articulo4" class="pages">
@@ -224,9 +261,48 @@
                         </div>
                     </div>
                     <div id="articulo5" class="pages">
-                          <div>
-
-                          </div>
+                          <div class="ssh-articulo">
+                                <h2>¿Que es HTTP?</h2>
+                                <p>El Protocolo de tran
+                                    sferencia de hipertexto (en i
+                                    nglés, Hypertext Transfer Protoc
+                                    ol, abreviado HTTP) es el protocol
+                                    o de comunicación que permite las tra
+                                    nsferencias de información en la World Wide Web</p>
+                                <h3>Realizamos una peticion web y abrimos wireshark</h3>
+                                <img src="img/http/http1.png" width="400"/>
+                                <h3>Protocolos usados</h3>
+                                <p>Transporte = TCP</p>
+                                <p>Enlance = Ethernet 2</p>
+                                <p>Red = IPv4</p>
+                                <img src="img/http/http2.png" width="400"/>
+                                <h3>Puertos implicados en la capa de transporte</h3>
+                                <p>Estan implicados los siguientes puertos</p>
+                                <p>Puerto Origen : 37612</p>
+                                <p>Puerto Origen : 80</p>
+                                <p>Payload es de unos 87 bytes</p>
+                                <img src="img/http/http3.png" width="400"/>
+                                <h3>Direccions IP Implicadas en esta peticion</h3>
+                                <p>Ip Origen : 192.168.18.149 → Pertenece a mi equipo</p>
+                                <p>Ip Destino : 192.168.18.3 → Pertenece a Cisco</p>
+                                <p>El Payload es 402 – 20 = 382 bytes</p>
+                                <img src="img/http/http4.png" width="400"/>
+                                <h3>Direcciones MAC Implicadas en esta peticion</h3>
+                                <p>Destino → MAC de Cisco</p>
+                                <p>Origen → MAC de  mi Equipo</p>
+                                <p>Payloads</p>
+                                <p>Ipv4 382 bytes</p>
+                                <p>TCP 1046 bytes</p>
+                                <p>TCP 1046 bytes</p>
+                                <img src="img/http/http5.png" width="400"/>
+                                <h3>Protocolo usado</h3>
+                                <h4>HTTP 1.1</h4>
+                                <img src="img/http/http6.png" width="400"/>
+                                <h3>Acuerdo en tres bandas entre cliente y servidor</h3>
+                                <p>Los 3 primeros paquetes TCP de esta captura son el acuerdo en tres bandas entre cliente y servidor.
+                                    Se envían paquetes 3 paquetes entre el servidor y el cliente para ponerse de acuerdo y luego se empiezan a enviar los datos.</p>
+                                    <img src="img/http/http7.png" width="400"/>
+                                </div>
                     </div>
 
                 </div>
@@ -247,7 +323,7 @@
                                 <a href="#articulo1"><img src="img/docker.jpg" width="55px"></a>
                             </div>
                             <div class="s-redes-items">
-                                <a href="#articulo2"><img src="img/ssh.jpg" width="55px"></a>
+                                <a href="#articulo2" id="lol"><img src="img/ssh.jpg" width="55px"></a>
                             </div>
                             <div class="s-redes-items">
                                 <a href="#articulo3"><img src="img/ftp.jpg" width="55px"></a>
@@ -266,6 +342,7 @@
             <footer>
                 <p style="color: white;">best portfolio atm</p>
             </footer>
+            
         </div>
         
         
