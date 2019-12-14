@@ -55,7 +55,7 @@ a {
 
 /* CSS Portfolio */
 .container {
-    height: 122vw;
+    height: 90vw;
 }
 .header-zona-1 {
     height: 35px;
@@ -112,7 +112,6 @@ a {
 .menu-articulos {
     height: 600px;
     width: 30%;
-    border: 1px solid black;
     float: left;
     padding: 20px;
     background-color: white;
@@ -126,6 +125,26 @@ a {
     font-weight: bold;
     letter-spacing: 2px;
 }
+
+.ultimas-entradas {
+    border-top: 5px solid #000228;
+}
+.ultimas-entradas p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    font-size: 1.4em;
+}
+.ultimas-entradas a {
+    color: blue;
+    text-decoration: underline;
+}
+.ultimas-entradas a:hover {
+    color: red;
+}
+
+
 .secciones p {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -133,6 +152,14 @@ a {
     letter-spacing: 0.2px;
     font-size: 1.4em;
 }
+.secciones {
+    padding-bottom: 25px;
+}
+
+
+
+
+
 .s-redes h2 {
     font-weight: bold;
     letter-spacing: 0.2px;
@@ -151,6 +178,23 @@ a {
 .s-redes-items:hover {
     box-shadow: 0 0 6px rgb(117, 0, 0);
 }
+.s-informatica h2 {
+    clear: both;
+    margin-top: 150px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+}
+
+
+
+
+
+
+
+
+
+
 .pages {
     display: none;
 }
@@ -222,7 +266,7 @@ footer {
     clear: both;
     background-color: #000228;
     position: relative;
-    bottom: -1438px;
+    bottom: -1338px;
 }
 /*    /*MEDIA QUERIES
 and (orientation: landscape)*/
