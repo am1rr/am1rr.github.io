@@ -176,7 +176,7 @@ a {
     border: 1px solid #d1d1d1;
 }
 .s-redes-items:hover {
-    box-shadow: 0 0 6px rgb(117, 0, 0);
+    box-shadow: 0 0 8px rgb(20, 0, 58);
 }
 .s-informatica h2 {
     clear: both;
@@ -342,7 +342,36 @@ and (orientation: landscape)*/
         position: relative;
         bottom: 105px;
     }
-
+    /*portfoli oresponsivo*/
+    .socialmedia {
+        display: none;
+    }
+    .menu-articulos {
+       width: 100%;
+       position: relative;
+       top: -750px;
+       height:150px;
+  
+    }
+    .s-redes div {
+        margin-left: 35px;
+    }
+    .s-informatica {
+        display: none;
+    }
+    .menu-articulos .social {
+        display: none;
+    }
+    .menu-articulos .ultimas-entradas {
+        display: none;
+    }
+    .main-content {
+        width: 100%;
+        margin-top: 150px;
+    }
+    .zona-articulos {
+        width: 100%;
+    }
 
 
 
@@ -371,8 +400,37 @@ and (orientation: landscape)*/
         bottom: 85px;
     }
 
+    /*portfoli oresponsivo*/
+    .socialmedia {
+        display: none;
+    }
+    .menu-articulos {
+       width: 100%;
+       position: relative;
+       top: -750px;
+       height:150px;
+  
+    }
+    .s-redes div {
+        margin-left: 30px;
+    }
+    .s-informatica {
+        display: none;
+    }
+    .menu-articulos .social {
+        display: none;
+    }
+    .menu-articulos .ultimas-entradas {
+        display: none;
+    }
+    .main-content {
+        width: 100%;
+        margin-top: 150px;
+    }
+    .zona-articulos {
+        width: 100%;
+    }
 
-
-
-    /*Portfolio responsive */ 
+    
+    
 }
