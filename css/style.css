@@ -354,7 +354,7 @@ and (orientation: landscape)*/
   
     }
     .s-redes div {
-        margin-left: 20px;
+        margin-left: 10px;
     }
     .s-informatica {
         display: none;
@@ -392,8 +392,12 @@ and (orientation: landscape)*/
         font-size: 3vw;
     }
     .header-zona-3 div {
-        padding: 14px;
-        font-size: 0.78em;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    .header-zona-3 div {
+        padding-bottom: 24px;
+        padding-top: 20px;
     }
     .isocialmedia {
         position: relative;
@@ -412,7 +416,7 @@ and (orientation: landscape)*/
   
     }
     .s-redes div {
-        margin-left: 20px;
+        margin-left: 10px;
     }
     .s-informatica {
         display: none;
