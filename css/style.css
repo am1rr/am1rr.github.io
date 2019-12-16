@@ -354,7 +354,7 @@ and (orientation: landscape)*/
   
     }
     .s-redes div {
-        margin-left: 10px;
+        margin-left: 0px;
     }
     .s-informatica {
         display: none;
@@ -416,7 +416,7 @@ and (orientation: landscape)*/
   
     }
     .s-redes div {
-        margin-left: 10px;
+        margin-left: 0px;
     }
     .s-informatica {
         display: none;
