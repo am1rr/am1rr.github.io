@@ -1,0 +1,203 @@
+/*CSS GENERAL*/
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.clearfix {
+    clear: both;
+    float: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* CSS INICIO */
+
+#container {
+    background-image: url(../hola/img/bg.svg);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position: center;
+}
+
+/* CSS HEADER */
+
+.bar1, .bar2, .bar3 {
+    width: 40px;
+    height: 5px;
+    background-color: rgb(131, 0, 0);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.bar2 {
+    width: 25px;
+}
+  
+.change .bar1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+  
+.change .bar2 {
+    opacity: 0;
+}
+  
+.change .bar3 {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#i-header #button {
+    margin-left: 20px;
+    margin-top: 20px;
+    float: left;
+}
+
+#i-header h2 {
+    margin-top: 20px;
+    margin-left: 30px;
+    float: left;
+    color: rgb(70, 70, 70);
+    font-size: 35px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+
+#i-header #button:hover {
+    cursor: pointer;
+}
+
+/* CSS MAIN */
+
+#i-main h1 {
+    overflow: hidden;
+    width: 920px;
+    letter-spacing: 1px;
+    font-size: 110px;
+    margin-left: 100px;
+    margin-top: 90px;
+    text-shadow: 1px 1px 2px rgb(85, 0, 0),2px 2px 0px rgb(85, 0, 0),2px 3px 0px rgb(85, 0, 0),2px 4px 5px rgb(85, 0, 0);
+}
+
+#i-main p {
+    display: block;
+    width: 620px;
+    margin-left: 170px;
+    margin-top: 50px;
+    font-size: 25px;
+    line-height: 45px;
+    border-left: 3px solid rgb(71, 0, 0);
+    border-bottom: 3px solid rgb(71, 0, 0);
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+/* CSS BOTONES PORTFOLIO Y CONTACTO */
+
+#buttons p {
+    float: left;
+    margin-left: 175px;
+    margin-top: 20px;
+    color: white;
+    padding: 15px;
+    width: 200px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(126, 0, 0);
+}
+
+#buttons p:hover {
+    background-color: rgb(37, 37, 37);
+    box-shadow: 3px 3px 6px #ccc;
+    cursor: pointer;
+    transition: all 300ms;
+    transform: scale(1.2,1.2);
+}
+
+/* FOOTER CSS */
+
+#social .overlay {
+    width: 120px;
+    display: block;
+    height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: absolute;
+    padding: 20px;
+    color: white;
+    margin-left: 70px;
+    margin-top: -69px;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: translateX(-80%);
+    opacity: 0;
+    background: rgb(212, 0, 0);
+}
+
+#social div:hover .overlay {
+    opacity: 1;
+    transition: all 400ms;
+    transform: translateX(5%);
+}
+
+#social div {
+    width: 100px;
+    z-index: 99;
+}
+
+#social div:hover img {
+    transform: rotateZ(90deg);
+    transition: all 300ms;
+}
+
+#putin img {
+    position: absolute;
+    bottom: -60px;
+    left: 200px;
+    width: 700px;
+}
+
+/* CSS MENU  DESPLEGABLE */
+.menu {
+    width: 65%;
+    height: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.986);
+    position: relative;
+    bottom: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px red;
+}
+
+
+.menu div {
+    margin: 0px auto;
+    width: 70%;
+    padding: 100px;
+    text-align: center;
+}
+
+.menu div p {
+    font-size: 65px;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    border-radius:5px;
+    background: rgb(8, 8, 8);
+    text-shadow: 1px 1px 0px rgb(90, 0, 0),2px 2px 0px rgb(90, 0, 0),3px 3px 0px rgb(90, 0, 0),4px 4px 0px rgb(90, 0, 0),5px 5px 0px rgb(90, 0, 0) ;
+}
+
+.menu div p:hover {
+    background-color: rgb(17, 17, 17);
+    box-shadow: 2px 2px 5px gray;
+    transform: scale(1.2,1.2);
+    transition: all 300ms;
+    
+}

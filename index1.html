@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inicio</title>
+    <link rel="stylesheet" type="text/css" href="css/style1.css"/>
+</head>
+<body>
+    <!-- Script Hamburger -->
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Script Hamburger Ends -->
+
+
+    <!-- Script Menu Start -->
+    <script>
+    $(document).ready(function() {
+        $('#button').click(function() {
+                $('.menu').slideToggle("fast");
+        });
+    });
+    </script>
+    <!-- Script Menu Ends -->
+
+    <div id="container">
+        <!-- Header Starts-->
+        <header id="i-header">
+            <!-- Boton Starts -->
+            <div id="button" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <!-- Boton Ends -->
+            <h2>Inicio</h2>
+        </header>
+        <!-- Header Ends-->
+
+        <div class="clearfix"></div>
+
+        <!-- Main Starts-->
+        <main id="i-main">
+            <h1> < Amir Khalilov ></Amir></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Id minima quisquam excepturi voluptatibus maxime odit ad
+                ipisci sequi dolorem ducimus vero. Ullam explicabo vel tot
+                am magni quae dignissimos dicta laborum consequuntur!</p>
+        </main>
+        <!-- Main Ends-->
+        <div id="buttons">
+            <p><a href="portfolio.html">PORTFOLIO</a></p>
+            <p><a>CONTACTO</a></p>
+        </div>
+        <div class="clearfix"></div>
+        <!--Footer Starts-->
+        <footer id="i-footer">
+            <div id="social">
+                <div id="twitter">
+                    <a href="#"><img src="hola/img/twitter.png" width="70"></a>
+                    <p class="overlay">Twitter</p>
+                </div>
+
+                <div id="facebook">
+                    <a href="#"><img src="hola/img/facebook.png" width="70"></a>
+                    <p class="overlay">Facebook</p>
+                </div>
+
+                <div id="instagram">
+                    <a href="#"><img src="hola/img/instagram.png" width="70"></a>
+                    <p class="overlay">Instagram</p>
+                </div>
+            </div>
+
+            <!-- Putin Starts-->
+            <div id="putin">
+                <img src="hola/img/putin.png"  width="1200"/>
+            </div>
+            <!-- Putin Ends-->
+        </footer>
+        <!--Footer Ends-->
+
+        <!-- Menu Starts -->
+        <div class="menu" style="display: none;">
+            <div>
+                <p><a href="#">Inicio</a></p>
+                <p><a href="portfolio.html">Portfolio</a></p>
+                <p><a href="#">Sobre mi</a></p>
+                <p><a href="#">Mis projectos</a></p>
+                <p><a href="#">Contacto</a></p>
+            </div>
+        </div>
+        <!-- Menu Ends  -->
+    </div>
+</body>
+</html>
