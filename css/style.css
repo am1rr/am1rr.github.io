@@ -53,6 +53,10 @@ a {
     box-shadow: 0 0 6px red;
 }
 
+
+
+
+
 /* CSS Portfolio */
 .container {
     height: 90vw;
@@ -97,6 +101,8 @@ a {
 .header-zona-3 div:hover {
     background-color: red;
 }
+
+
 
 /* artiuculos */
 .main-content {
@@ -163,6 +169,7 @@ a {
 .s-redes h2 {
     font-weight: bold;
     letter-spacing: 0.2px;
+    font-size: 20px;
 }
 .s-redes {
     text-align: center;
@@ -176,7 +183,7 @@ a {
     border: 1px solid #d1d1d1;
 }
 .s-redes-items:hover {
-    box-shadow: 0 0 8px rgb(20, 0, 58);
+    box-shadow: 0 0 5px rgb(20, 0, 58),0 0 5px rgb(20, 0, 58),0 0 5px rgb(20, 0, 58);
 }
 .s-informatica h2 {
     clear: both;
@@ -202,37 +209,7 @@ a {
 .bold {
     font-weight: bold;
 }
-/* articulo docker */
-.docker-articulo ul {
-    margin-left: 20px;
-    color: black;
-}
 
-.docker-articulo p {
-    margin-top: 5px;
-    text-align: left;
-    font-size: 1.25em;
-}
-.docker-articulo h2 {
-    font-size: 2em;
-    color: rgb(117, 0, 0);
-    text-align: center;
-    
-}
-.docker-articulo h3 {
-    font-size: 1.25em;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: rgb(117, 0, 0);
-    font-weight: bold;
-}
-.docker-articulo ul li a {
-    color: blue;
-    text-decoration: underline;
-}
-.docker-articulo ul li a:hover {
-    color: red;
-}
 
 /* Articulo SSH */
 .ssh-articulo h2 {
@@ -267,174 +244,4 @@ footer {
     background-color: #000228;
     position: relative;
     bottom: -1338px;
-}
-/*    /*MEDIA QUERIES
-and (orientation: landscape)*/
-    /* Greater than standard 1200px Extra Large */
-    @media only screen and (min-width: 1201px) {
-    
-    
-}
-/*
-/*Between 993px and 1200px Large*/
-@media only screen and (min-width: 993px) and (max-width: 1200px) {
-/* Inicio */
-    .iheader div h1 {
-        font-size: 7vw;
-    }
-    .iheader p {
-        font-size: 1.5vw;
-        width: 70%;
-    }
-    .nav-bar div {
-    font-size: 1.7vw;
-        }
-
-
-
-
-    /* Portfolio*/
-
-}
-
- /*Between 768px and 992px Medium*/
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-        /* Inicio */
-    .iheader div h1 {
-        font-size: 10vw;
-    }
-    .iheader p {
-        font-size: 2.2vw;
-        width: 60%;
-    }
-    .nav-bar div {
-        font-size: 2.5vw;
-    }
-    .isocialmedia {
-        position: relative;
-        bottom: 85px;
-    }
-
-
-
-
-
-
-
-
-    /*Portfolio responsive */
-}
-
-    /*Between 576px and 767px Small*/
-@media only screen and (min-width: 577px) and (max-width: 768px) {
-    /* Inicio */
-    .iheader div h1 {
-        font-size: 12vw;
-    }
-    .iheader p {
-        font-size: 3vw;
-        width: 75%;
-    }
-    .nav-bar div {
-        font-size: 3vw;
-    }
-    .isocialmedia {
-        position: relative;
-        bottom: 105px;
-    }
-    /*portfoli oresponsivo*/
-    .socialmedia {
-        display: none;
-    }
-    .menu-articulos {
-       width: 100%;
-       position: relative;
-       top: -750px;
-       height:150px;
-  
-    }
-    .s-redes div {
-        margin-left: 0px;
-    }
-    .s-informatica {
-        display: none;
-    }
-    .menu-articulos .social {
-        display: none;
-    }
-    .menu-articulos .ultimas-entradas {
-        display: none;
-    }
-    .main-content {
-        width: 100%;
-        margin-top: 150px;
-    }
-    .zona-articulos {
-        width: 100%;
-    }
-
-
-
-    /*Portfolio responsive */
-}
-
-/*Smaller than 576px Extra Small */
-@media only screen and (max-width: 576px) {
-    /* Inicio */
-    .iheader div h1 {
-        font-size: 12vw;
-    }
-    .iheader p {
-        font-size: 3vw;
-        width: 70%;
-    }
-    .nav-bar div {
-        font-size: 3vw;
-    }
-    .header-zona-3 div {
-        padding: 10px;
-        font-size: 0.9em;
-    }
-    .header-zona-3 div {
-        padding-bottom: 24px;
-        padding-top: 20px;
-    }
-    .isocialmedia {
-        position: relative;
-        bottom: 85px;
-    }
-
-    /*portfoli oresponsivo*/
-    .socialmedia {
-        display: none;
-    }
-    .menu-articulos {
-       width: 100%;
-       position: relative;
-       top: -750px;
-       height:150px;
-  
-    }
-    .s-redes div {
-        margin-left: 0px;
-    }
-    .s-informatica {
-        display: none;
-    }
-    .menu-articulos .social {
-        display: none;
-    }
-    .menu-articulos .ultimas-entradas {
-        display: none;
-    }
-    .main-content {
-        width: 100%;
-        margin-top: 150px;
-    }
-    .zona-articulos {
-        width: 100%;
-    }
-
-    
-    
 }
