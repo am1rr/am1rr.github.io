@@ -1,0 +1,241 @@
+
+/* CSS GENERAL */
+body {
+    font-family: 'Antic';
+}
+.clearfix {
+    clear: both;
+    float: none;
+}
+
+.wrap {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.boton {
+    text-decoration: none !important;
+    color: white;
+    background-color: rgb(26, 26, 26);
+    padding: 5px;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+}
+
+.boton:hover {
+    background-color: rgb(43, 42, 42);
+    transition: all 300ms;
+}
+
+/* CSS TEXTOS */
+.titulo {
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-family: Anton;
+}
+
+.normal {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.imagen {
+    width: 300px;
+}
+
+.subtitulo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.link {
+    color: red ;
+    text-decoration: none ;
+    font-style: oblique;
+}
+
+.link:hover {
+    color: black;
+}
+
+.subtituloxl {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.files {
+    margin: 0px;
+    font-size: 15px;
+}
+
+.bold {
+    font-weight: bold;
+    color: rgb(0, 0, 29);
+}
+
+.comando {
+    background-color: rgb(230, 230, 230);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-weight: bold;
+    border: 2px dashed gray;
+    border-left: 5px solid red;
+    
+}
+
+.shell {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.respuesta {
+    background-color: rgb(214, 214, 214);
+    color: black;
+    padding: 5px;
+    font-size: 20px;
+    box-shadow: 0px 0px 2px black inset;
+}
+
+/* CSS HEADER */
+
+#date_time {
+    display: block;
+    background-image: url(../img/banner.png);
+    color: white;
+    padding: 10px;
+}
+
+.cabezera {
+    padding: 20px;
+}
+
+.cabezera h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(0, 0, 27);
+}
+
+.cabezera p {
+    color: rgb(0, 0, 27);
+    font-style: oblique;
+    font-weight: bold;
+}
+
+/* BARRA DE NAVEGACION */
+.nav-bar {
+    text-align: center;
+    margin: 0px;
+    background-color: rgb(0, 0, 27);
+}
+
+.nav-bar div {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    padding: 14px;
+    letter-spacing: 1.5px;
+}
+
+.selected {
+    background-color: red;
+}
+
+.nav-bar div:hover {
+    background-color: red;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+/* CSS MAIN */
+
+
+main {
+    width: 70%;
+    margin-top: 10px;
+    float: left;
+}
+
+main .pages {
+    display: none;
+}
+
+/* CSS ASIDE Y MENU */
+
+aside {
+    float: right;
+    height: 800px;
+    width: 26%;
+    margin-top: 10px;
+}
+
+aside .social {
+    border-top: 6px solid rgb(0, 0, 27);
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 27);
+    border-bottom: 6px solid rgb(0, 0, 27);
+    margin-bottom:15px;
+}
+
+aside .social img {
+    margin-top:5px;
+}
+
+aside .social img:hover {
+    transition: all 300ms;
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+}
+
+aside .secciones {
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(0, 0, 27) ;
+}
+
+aside .secciones .seccion {
+    margin: 10px;
+}
+ /*rgb(255, 34, 34)*/
+aside .secciones .seccion img {
+    float: left;
+    border: 2px solid  rgb(170, 0, 0);
+    cursor: pointer;
+}
+
+aside .secciones .seccion p {
+    width: 150px;
+    position: relative;
+    float: left;
+    padding: 19.5px;
+    background-color:rgb(0, 0, 27) ;
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translateX(-80px);
+    opacity: 0;
+    cursor: pointer;
+}
+
+aside .secciones .seccion:hover p {
+    opacity: 1;
+    transition: all 400ms;
+    transform: translateX(0px);
+}
+
+aside .secciones .seccion:hover img {
+    border: 2px solid rgb(0, 0, 27);
+    transition: all 400ms;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+

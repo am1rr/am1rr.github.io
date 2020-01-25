@@ -1,0 +1,19 @@
+
+@media (max-width: 1410px) {
+    .wrap {
+        width: 97%;
+    }
+
+}
+
+@media (max-width: 1162px) {
+    .wrap {
+        width: 100%;
+    }
+    main {
+        width: 100%;
+        float: none;
+    }
+    
+
+}

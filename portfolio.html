@@ -3,488 +3,525 @@
 
 <head>
     <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/x-icon" href="img/title.ico" />
-    <title>Portfolio</title>
-    <link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet'>
+    <title>Redes</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script type="text/javascript" src="js/date_time.js"></script>
-    <!--OTRO SCRIPT PA EL SWITCHING-->
-
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/title.ico" />
+    <script type="text/javascript" src="js/fecha.js"></script>
 </head>
 
 <body>
-    <!--Scripts-->
+    <!-- Script Switch -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/switch.js"></script>
+
     <div class="container">
-        <script type="text/javascript" src="js/switch.js"></script>
-        <!--HEADER-->
-        <div class="header-zona-1">
-            <span id="date_time"></span>
-            <script type="text/javascript">
-                window.onload = date_time('date_time');
-            </script>
+        <!-- Fecha Arriba Izquierda -->
+        <span id="date_time"></span>
+        <script type="text/javascript">
+            window.onload = date_time('date_time');
+        </script>
+
+        <!-- Nombre y Social -->
+        <div class="cabezera">
+            <h1>AMIR KHALILOV</h1>
+            <p>Portfolio de Trabajos</p>
         </div>
-        <div class="header-zona-2">
-            <p>AMIR KHALILOV</p>
-            <div class="socialmedia">
-                <img src="img/w.png" width="35" />
-                <img src="img/fb.png" width="35" />
-                <img src="img/is.png" width="35" />
-                <img src="img/tw.png" width="35" />
-            </div>
-            <p style="font-style: oblique;">Portfolio de Trabajos</p>
-        </div>
-        <nav class="header-zona-3">
-            <div><a href="index.html">Inicio</a></div>
+
+        <!-- Barra de Navegacion-->
+        <nav class="nav-bar">
+            <div>Inicio</div>
             <div>Redes</div>
             <div>Programacion</div>
-            <div>Administacion</div>
+            <div>Administracion</div>
             <div>Seguridad</div>
         </nav>
-        <!--TERMINA HEADER-->
 
+        <div class="wrap">
+            <!-- Practicas de Redes -->
+            <main>
 
-        <!--PRINCIAPL-->
-        <div class="main-content">
-
-            <!--ARTICULOS-->
-            <div class="zona-articulos" id="content">
+                <!-- Articulo 1 -->
                 <div id="articulo1" class="pages">
-                    <div class="ssh-articulo">
-                        <h2>¿Que es Docker?</h2>
-                        <p>
-                            Docker es un Subsistema de virtual
-                            ización que comparte con el anfritión
-                            el Kernel y el sistema de archivos .El
-                            anfitrión siempre es un sistema Linux.
-                            Si estamos en Windows o Mac, necestaré u
-                            na maquina virtualizada con VirtualBox o similar.
-                        </p>
-                        <p>
-                            Un software de máquinas virtuales necesita instalar el sistema operativo completo.
-                            Ejemplos de sistemas de virtualización.
-                        </p>
-                        <ul>
-                            <li>◼ VirtualBox</li>
-                            <li>◼ Hyper-V (Windows)</li>
-                            <li>◼ Parallels (MAC)</li>
-                            <li>◼ VMWare (Multiples plataformas)</li>
-                            <li>◼ QEMU (Linux)</li>
-                            <li>◼ XEN (Linux/UNIX)</li>
-                            <li>◼ KVM (Linux/UNIX)</li>
-                        </ul>
-                        <p>Un software de contenedores es un sistema
-                            de virtualización que comparte el Kernel
-                            con el anfitrión. Se basa en el concepto
-                            de microservicio, donde tengo todos los
-                            programas instalados, configurados y
-                            funcionando, gracias a los contenedores.
-                            Ejemplo se software de contenedores.</p>
-                        <ul>
-                            <li>◼ LXD (Linux)</li>
-                            <li>◼ Docker</li>
-                            <li>◼ Kubernetes</li>
-                        </ul>
-                        <figure>
-                            <img src="https://i2.wp.com/www.docker.com/blog/wp-content/uploads/Blog.-Are-containers-..VM-Image-1-1024x435.png?ssl=1"
-                                width="80%">
-                            <figcaption>Docker vs VirtualBox</figcaption>
-                        </figure>
-                        <p>Para saber mas sobre el Tema:</p>
-                        <ul>
-                            <li>
-                                <a href="https://www.docker.com/" target="_blank">Web oficial de docker</a>
-                            </li>
-                            <li>
-                                <a href="https://hub.docker.com/" target="_blank">Docker hub</a>
-                            </li>
-                            <li>
-                                <a href="https://docs.docker.com/" target="_blank">Tutorial de Docker</a>
-                            </li>
-                        </ul>
-                        <h2>Dockerfiles, ¿Que son?</h2>
-                        <p>Un dockerfile es una receta para crear u
-                            na imagen para una de aplicación particula
-                            r de Docker. De este modo podemos tomar una i
-                            magen base, instalarle programas, configurar e
-                            sos programas y dejarla preparada para crear con
-                            tenedores a partir de ella</p>
-                        <h3>Ejemplo Dockerfile</h3>
-                        <ul>
-                            <li># use phusion/baseimage as base image.</li>
-                            <li><span class="bold">from</span> Ubuntu:latest</li>
-                            <li># use baseimage-docker's init system.</li>
-                            <li>cmd ["/sbin/my_init"]</li>
-                            <li># install prerequisites</li>
-                            <li>run apt-get update; \</li>
-                            <li>apt-get install -y udhcpd</li>
-                            <li># set up start up scripts</li>
-                            <li><span class="bold">run</span> mkdir /etc/service/udhcpd</li>
-                            <li>add udhcpd.sh /etc/service/udhcpd/run</li>
-                            <li>run chmod +x /etc/service/udhcpd/run</li>
-                            <li># clean up apt when done.</li>
-                            <li>run apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*</li>
-                            <li># expose the port</li>
-                            <li><span class="bold">expose</span> 67</li>
-                            <li>expose 67/udp</li>
-                            <li>expose 68</li>
-                            <li>expose 68/udp</li>
-                            <li># volumes</li>
-                            <li><span class="bold">volume</span> /data</li>
-                        </ul>
-                        <p>Comando <span class="bold">from</span>: Buscas la imagen mas reciente de ubuntu con
-                            ubuntu:latest</p>
-                        <p>Comando <span class="bold">run</span>: Ejecutas y añades scrip para actualizar el sistema e
-                            instalar udhcp</p>
-                        <p>Comando <span class="bold">expose</span>: Abres los puertos 67 y 68</p>
-                        <p>Comando <span class="bold">volume</span>: Comparte una carpeta entre el contenedor de docker
-                            y el host</p>
-                    </div>
-                </div>
-                <!-- ARTICULO 1 TERMINA-->
+                    <h1 class="titulo">¿Que es Docker?</h1>
+                    <p class="normal">Docker es un Subsistema de virtual ización que comparte con el anfritión el Kernel
+                        y el sistema
+                        de archivos .El anfitrión siempre es un sistema Linux. Si estamos en Windows o Mac, necestaré u
+                        na maquina virtualizada con VirtualBox o similar</p>
+                    <p class="normal">Un software de máquinas virtuales necesita instalar el sistema operativo completo.
+                    </p>
+                    <p class="normal">Ejemplos de sistemas de virtualización</p>
+                    <ul class="normal">
+                        <li>◼ VirtualBox</li>
+                        <li>◼ Hyper-V (Windows)</li>
+                        <li>◼ Parallels (MAC)</li>
+                        <li>◼ VMWare (Multiples plataformas)</li>
+                        <li>◼ QEMU (Linux)</li>
+                        <li>◼ XEN (Linux/UNIX)</li>
+                        <li>◼ KVM (Linux/UNIX)</li>
+                    </ul>
+                    <p class="normal">Un software de contenedores es un sistema de virtualización que comparte el Kernel
+                        con el anfitrión. Se basa en el concepto de microservicio, donde tengo todos los programas
+                        instalados, configurados y funcionando, gracias a los contenedores.</p>
+                    <p class="normal">Ejemplo se software de contenedores.</p>
+                    <ul class="normal">
+                        <li>◼ LXD (Linux)</li>
+                        <li>◼ Docker</li>
+                        <li>◼ Kubernetes</li>
+                    </ul>
+                    <h2 class="subtitulo">Docker vs Maquina Virtual</h2>
+                    <img class="imagen" src="img/d.png">
+                    <img class="imagen" src="img/v.png">
 
+                    <h2 class="subtitulo">Mas informacion</h2>
+                    <p><a href="#" class="link">Web oficial de docker</a></p>
+                    <p><a href="#" class="link">Docker hub</a></p>
+                    <p><a href="#" class="link">Tutorial de Docker</a></p>
+
+                    <h3 class="subtituloxl">Dockerfiles, ¿Qué son?</h3>
+
+                    <p class="normal">Un dockerfile es una receta para crear u na imagen para una de aplicación
+                        particula r de Docker. De este modo podemos tomar una i magen base, instalarle programas,
+                        configurar e sos programas y dejarla preparada para crear con tenedores a partir de ella</p>
+
+                    <h2 class="subtitulo">Ejemplo Dockerfile</h2>
+                    <p class="files"># use phusion/baseimage as base image.</p>
+                    <p class="files"><span class="bold">from</span> Ubuntu:latest</p>
+                    <p class="files"># use baseimage-docker's init system.</p>
+                    <p class="files">cmd ["/sbin/my_init"]</p>
+                    <p class="files"># install prerequisites</p>
+                    <p class="files"><span class="bold">run</span> apt-get update; \</p>
+                    <p class="files">apt-get install -y udhcpd</p>
+                    <p class="files"># set up start up scripts</p>
+                    <p class="files">run mkdir /etc/service/udhcpd</p>
+                    <p class="files">add udhcpd.sh /etc/service/udhcpd/run</p>
+                    <p class="files">run chmod +x /etc/service/udhcpd/run</p>
+                    <p class="files"># clean up apt when done</p>
+                    <p class="files">run apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*</p>
+                    <p class="files"># <span class="bold">expose</span> the port</p>
+                    <p class="files">expose 67</p>
+                    <p class="files">expose 67/udp</p>
+                    <p class="files">expose 68</p>
+                    <p class="files">expose 68/udp</p>
+                    <p class="files"># volumes</p>
+                    <p class="files"><span class="bold">volume</span> /data</p>
+
+                    <p class="normal">Comando <span class="bold">from</span>: Buscas la imagen mas reciente de ubuntu
+                        con ubuntu:latest</p>
+                    <p class="normal">Comando <span class="bold">run</span>: Ejecutas y añades scrip para actualizar el
+                        sistema e instalar udhcp</p>
+                    <p class="normal">Comando <span class="bold">expose</span>: Abres los puertos 67 y 68</p>
+                    <p class="normal">Comando <span class="bold">volume</span>: Comparte una carpeta entre el contenedor
+                        de docker y el host</p>
+
+                </div>
+
+
+                <!-- Articulo 2 -->
                 <div id="articulo2" class="pages">
-                    <div class="ssh-articulo">
-                        <h2>¿Que es el SSH?</h2>
-                        <p>SSH o Secure Shell, es un protocolo d
-                            e administración remota que le permite
-                            a los usuarios controlar y modificar s
-                            us servidores remotos a través de Inter
-                            net a través de un mecanismo de autenticación.</p>
-                        <p>
-                            Proporciona un mecanismo
-                            para autenticar un usuario rem
-                            oto, transferir entradas desde el c
-                            liente al host y retransmitir la salid
-                            a de vuelta al cliente. El servicio se creó
-                            como un reemplazo seguro para el Telnet sin
-                            cifrar y utiliza técnicas criptográficas par
-                            a garantizar que todas las comunicaciones hac
-                            ia y desde el servidor remoto sucedan de manera encriptada.
-                        </p>
-                        <h3>Instalamos el servidor SSH en Linux y comprobamos que se escucha el puerto 22.</h3>
-                        <h4>sudo nmap -sU --top-ports 1000 scanme.nmap.org</h4>
-                        <img src="img/ssh/ssh1.png" width="400">
-                        <h3>Crear dos usuarios denominados usuario1 y usuario2.</h3>
-                        <h4>ssudo useradd -m -d /home/alumno1 alumno1 -s /bin/bash</h4>
-                        <img src="img/ssh/ssh2.png" width="400">
-                        <h3>Cambiar de puerto del servidor e intentar acceder de nuevo</h3>
-                        <h4>Port 2222</h4>
-                        <img src="img/ssh/ssh3.png" width="400">
-                        <h3>Cambiar configuracion del servidor para acceder con el usr1 y no con el usr2</h3>
-                        <h4>AllowUsers alumno2 , DenyUsers alumno2</h4>
-                        <img src="img/ssh/ssh4.png" width="400">
-                        <h3>Intentamos acceder</h3>
-                        <h4>ssh alumno2@192.168.18.210</h4>
-                        <img src="img/ssh/ssh5.png" width="400">
-                        <h3>Cambiamos la configuracion para que solo pueda acceder una Ip determinada</h3>
-                        <h4>AllowIP 192.168.18.247</h4>
-                        <img src="img/ssh/ssh6.png" width="400">
-                        <h3>Buscamos el paquete del SSH dentro de WireShark y comprobaremos que esta encriptado</h3>
-                        <h4>Efectivamente, está Encriptado</h4>
-                        <img src="img/ssh/ssh7.png" width="400">
-                    </div>
-                </div>
-                <!-- ARTICULO 2 TERMINA-->
+                    <h1 class="titulo">SSH, ¿Qué es?</h1>
 
+                    <p class="normal">SSH o Secure Shell, es un protocolo d e administración remota que le permite a los
+                        usuarios controlar y modificar s us servidores remotos a través de Inter net a través de un
+                        mecanismo de autenticación.</p>
+
+                    <p class="normal">Proporciona un mecanismo para autenticar un usuario rem oto, transferir entradas
+                        desde el c liente al host y retransmitir la salid a de vuelta al cliente. El servicio se creó
+                        como un reemplazo seguro para el Telnet sin cifrar y utiliza técnicas criptográficas par a
+                        garantizar que todas las comunicaciones hac ia y desde el servidor remoto sucedan de manera
+                        encriptada
+                    </p>
+                    <p class="subtituloxl">1. Configurar SSH</p>
+                    <p class="normal">1.1 Instalamos el servidor SSH en Linux y comprobamos que se escucha el puerto 22.</p>
+                    <p class="comando">sudo nmap -sU --top-ports 1000 scanme.nmap.org</p>
+
+                    <img class="shell" src="img/ssh/ssh1.png">
+
+                    <p class="normal">1.2 Crear dos usuarios denominados usuario1 y usuario2.</p>
+                    <p class="comando">sudo useradd -m -d /home/alumno1 alumno1 -s /bin/bash</p>
+
+                    <img class="shell" src="img/ssh/ssh2.png">
+
+                    <p class="normal">1.3 Cambiar de puerto del servidor e intentar acceder de nuevo</p>
+                    <p class="comando">Port 2222</p>
+
+                    <img class="shell" src="img/ssh/ssh3.png">
+
+                    <p class="normal">1.4 Cambiar configuracion del servidor para acceder con el usr1 y no con el usr2</p>
+                    <p class="comando">AllowUsers alumno2 , DenyUsers alumno2</p>
+
+                    <img class="shell" src="img/ssh/ssh4.png">
+
+                    <p class="normal">1.5 Intentamos acceder</p>
+                    <p class="comando">ssh alumno2@192.168.18.210</p>
+
+                    <img class="shell" src="img/ssh/ssh5.png">
+
+                    <p class="normal">1.6 Cambiamos la configuracion para que solo pueda acceder una Ip determinada</p>
+                    <p class="comando">AllowIP 192.168.18.247</p>
+
+                    <img class="shell" src="img/ssh/ssh6.png">
+
+                    <p class="normal">1.7 Buscamos el paquete del SSH dentro de WireShark y comprobaremos que esta
+                        encriptado</p>
+                    <img class="shell" src="img/ssh/ssh7.png">
+                </div>
+
+                <!-- Articulo 3 -->
                 <div id="articulo3" class="pages">
-                    <div class="ssh-articulo">
-                        <h2>¿Que es el FTP?</h2>
-                        <p>El Protocolo de transferencia de archivos (en inglés F
-                            ile Transfer Protocol o FTP) es un protocolo de red para la
-                            transferencia de archivos entre sistemas conectados a una r
-                            ed TCP (Transmission Control Protocol), basado en la arquite
-                            ctura cliente-servidor. </p>
-                        <p>
-                            Desde un equipo cliente se puede conectar a un servidor para descargar archivos desde él o
-                            para enviarle archivos, independientemente del sistema operativo utilizado en cada equipo.
-                            El servicio FTP es ofrecido por la capa de aplicación del modelo
-                            de capas de red TCP/IP al usuario, utilizando normalmente el puert
-                            o de red 20 y el 21
-                        </p>
-                        <p>En esta guia vamos a configurar un servidor FTP</p>
-                        <h3>Habilitamos el modo Anonimo</h3>
-                        <h4>anonymous_enable=yes</h4>
-                        <img src="img/ftp/f1.png" width="400">
-                        <h3>Habilitamos las opciones para usuarios del Sistema y para que pueda descargar y subir</h3>
-                        <h4>local_enable=YES</h4>
-                        <h4>write_enable=YES</h4>
-                        <img src="img/ftp/f2.png" width="400">
-                        <h3>Habilitamos el modo pasivo</h3>
-                        <h4>passive</h4>
-                        <img src="img/ftp/f3.png" width="400">
-                        <h3>Habilita los logs</h3>
-                        <h4>xferlog_file=/far/log/vsftpd.log</h4>
-                        <img src="img/ftp/f4.png" width="400">
-                        <h3>Screenshoot logs</h3>
-                        <h4>Screenshoot here</h4>
-                        <img src="img/ftp/f5.png" width="400">
-                        <h3>Cambios el mensaje de bienvenida</h3>
-                        <h4>Screenshoot here</h4>
-                        <img src="img/ftp/f6.png" width="400">
-                        <h3>Abrimos WireShark y comprobamos que esta funcionando en modo pasivo</h3>
-                        <h4>Screenshoot here</h4>
-                        <img src="img/ftp/f7.png" width="400">
-                        <h3>Pantallazo Acceso modo grafico</h3>
-                        <h4>Screenshoot here</h4>
-                        <img src="img/ftp/f8.png" width="400">
-                    </div>
-                </div>
-                <!-- ARTICULO 3 TERMINA-->
+                    <h1 class="titulo">Telnet, ¿Qué es?</h1>
+                    <p class="normal">Telnet es una herramienta que ha sido utilizada durante décadas por los administr
+                        adores de sistema informáticos en el ámbito de l as redes. Las conexiones remotas no son algo
+                        precis amente nuevo, ya desde las primeras redes y con sistem as sin escritorio se utilizaban
+                        herramientas como Telnet para conectarnos a servidores y equipos conectados a una red, tanto de
+                        forma remota como interna</p>
+                    <p class="subtituloxl">1. Configuracion telnet</p>
+                    <p class="normal">1.1 Instalamos Telnet mediante el siguiente comando</p>
+                    <p class="comando">sudo apt install telnetd</p>
 
+                    <img class="shell" src="img/telnet/t1.png">
+
+                    <p class="normal">1.2 Despues ejecutamos el siguiente comando para iniciar el servidor Telnet</p>
+                    <p class="comando">sudo /etc/init.d/openbsd-inetd restart</p>
+
+                    <img class="shell" src="img/telnet/t2.png">
+
+                    <p class="normal">1.3 Comprobamos que el servicio de Telnet esta funcionando con un:</p>
+                    <p class="comando">snmap localhost</p>
+
+                    <img class="shell" src="img/telnet/t3.png">
+
+                    <p class="normal">1.4 Cuando lo tengamos ejecutado nos conoectaremos con el comando (192.168.18.210 es
+                        la Ip de la Raspberry):</p>
+                    <p class="comando">telnet 192.168.18.210</p>
+
+                    <img class="shell" src="img/telnet/t4.png">
+
+                    <p class="normal">1.5 Ejecutamos algunos comandos desde Telnet y vamos al wireshark a analizar trafico
+                    </p>
+                    <p class="comando">Buscamos el paquete y hacemos Click en Follow TCP Stream (Podemos ver que no va
+                        encriptado)</p>
+
+                    <img class="shell" src="img/telnet/t5.png">
+                </div>
+
+                <!-- Articulo 4 -->
                 <div id="articulo4" class="pages">
-                    <div class="ssh-articulo">
-                        <h2>¿Que es Telnet?</h2>
-                        <p>Telnet es una herramienta que ha sido
-                            utilizada durante décadas por los administr
-                            adores de sistema informáticos en el ámbito de l
-                            as redes. Las conexiones remotas no son algo precis
-                            amente nuevo, ya desde las primeras redes y con sistem
-                            as sin escritorio se utilizaban herramientas como Telnet
-                            para conectarnos a servidores y equipos conectados a una
-                            red, tanto de forma remota como interna</p>
-                        <h3>Instalamos Telnet mediante el siguiente comando</h3>
-                        <h4>sudo apt install telnetd</h4>
-                        <img src="img/telnet/t1.png" width="400">
-                        <h3>Despues ejecutamos el siguiente comando para iniciar el servidor Telnet</h3>
-                        <h4>sudo /etc/init.d/openbsd-inetd restart</h4>
-                        <img src="img/telnet/t2.png" width="400">
-                        <h3>Comprobamos que el servicio de Telnet esta funcionando con un</h3>
-                        <h4>snmap localhost</h4>
-                        <img src="img/telnet/t3.png" width="400">
-                        <h3>Cuando lo tengamos ejecutado nos conoectaremos con el comando (192.168.18.210 es la Ip de la
-                            Raspberry)</h3>
-                        <h4>telnet 192.168.18.210</h4>
-                        <img src="img/telnet/t4.png" width="400">
-                        <h3>Ejecutamos algunos comandos desde Telnet y vamos al wireshark a analizar trafico</h3>
-                        <h4>Buscamos el paquete y hacemos Click en Follow TCP Stream (Podemos ver que no va encriptado)
-                        </h4>
-                        <img src="img/telnet/t5.png" width="400">
-                    </div>
-                </div>
-                <!-- ARTICULO 4 TERMINA-->
+                    <h1 class="titulo">¿Qué es HTTP?</h1>
+                    <p class="normal">El Protocolo de tran sferencia de hipertexto (en i nglés, Hypertext Transfer
+                        Protoc ol, abreviado
+                        HTTP) es el protocol o de comunicación que permite las tra nsferencias de información en la
+                        World Wide Web</p>
 
+                    <p class="normal">Realizamos una peticion web y abrimos wireshark</p>
+
+                    <img class="shell" src="img/http/http1.png" width="700px">
+
+
+                    <p class="normal">Protocolos usados</p>
+                    <p class="respuesta">Transporte = TCP</p>
+                    <p class="respuesta">Enlance = Ethernet 2</p>
+                    <p class="respuesta">Red = IPv4</p>
+
+                    <img class="shell" src="img/http/http2.png" width="700px">
+
+                    <p class="normal">Puertos implicados en la capa de transporte</p>
+
+                    <p class="respuesta">Estan implicados los siguientes puertos</p>
+                    <p class="respuesta">Puerto Origen : 37612</p>
+                    <p class="respuesta">Puerto Origen : 80</p>
+                    <p class="respuesta">Payload es de unos 87 bytes</p>
+
+                    <img class="shell" src="img/http/http3.png " width="700px">
+
+                    <p class="normal">Direccions IP Implicadas en esta peticion</p>
+
+                    <p class="respuesta">Ip Origen : 192.168.18.149 → Pertenece a mi equipo</p>
+                    <p class="respuesta">Ip Destino : 192.168.18.3 → Pertenece a Cisco</p>
+                    <p class="respuesta">El Payload es 402 – 20 = 382 bytes</p>
+
+                    <img class="shell" src="img/http/http4.png " width="700px">
+
+                    <p class="normal">Direcciones MAC Implicadas en esta peticion</p>
+
+                    <p class="respuesta">Destino → MAC de Cisco</p>
+                    <p class="respuesta">Origen → MAC de mi Equipo</p>
+                    <p class="respuesta">Payloads</p>
+                    <p class="respuesta">Ipv4 382 bytes</p>
+                    <p class="respuesta">TCP 1046 bytes</p>
+                    <p class="respuesta">TCP 1046 bytes</p>
+
+                    <img class="shell" src="img/http/http5.png" width="700px">
+
+                    <p class="normal">Protocolo usado</p>
+                    <p class="respuesta">HTTP 1.1</p>
+
+                    <img class="shell" src="img/http/http6.png" width="700px">
+
+                    <p class="normal">Acuerdo en tres bandas entre cliente y servidor</p>
+                    <p class="respuesta">Los 3 primeros paquetes TCP de esta captura son el acuerdo en tres bandas entre
+                        cliente y servidor. Se envían paquetes 3 paquetes entre el servidor y el cliente para ponerse de
+                        acuerdo y luego se empiezan a enviar los datos.</p>
+
+                    <img class="shell" src="img/http/http7.png" width="700px">
+                </div>
+
+                <!-- Arituculo 5 -->
                 <div id="articulo5" class="pages">
-                    <div class="ssh-articulo">
-                        <h2>¿Que es HTTP?</h2>
-                        <p>El Protocolo de tran
-                            sferencia de hipertexto (en i
-                            nglés, Hypertext Transfer Protoc
-                            ol, abreviado HTTP) es el protocol
-                            o de comunicación que permite las tra
-                            nsferencias de información en la World Wide Web</p>
-                        <h3>Realizamos una peticion web y abrimos wireshark</h3>
-                        <img src="img/http/http1.png" width="400" />
-                        <h3>Protocolos usados</h3>
-                        <p>Transporte = TCP</p>
-                        <p>Enlance = Ethernet 2</p>
-                        <p>Red = IPv4</p>
-                        <img src="img/http/http2.png" width="400" />
-                        <h3>Puertos implicados en la capa de transporte</h3>
-                        <p>Estan implicados los siguientes puertos</p>
-                        <p>Puerto Origen : 37612</p>
-                        <p>Puerto Origen : 80</p>
-                        <p>Payload es de unos 87 bytes</p>
-                        <img src="img/http/http3.png" width="400" />
-                        <h3>Direccions IP Implicadas en esta peticion</h3>
-                        <p>Ip Origen : 192.168.18.149 → Pertenece a mi equipo</p>
-                        <p>Ip Destino : 192.168.18.3 → Pertenece a Cisco</p>
-                        <p>El Payload es 402 – 20 = 382 bytes</p>
-                        <img src="img/http/http4.png" width="400" />
-                        <h3>Direcciones MAC Implicadas en esta peticion</h3>
-                        <p>Destino → MAC de Cisco</p>
-                        <p>Origen → MAC de mi Equipo</p>
-                        <p>Payloads</p>
-                        <p>Ipv4 382 bytes</p>
-                        <p>TCP 1046 bytes</p>
-                        <p>TCP 1046 bytes</p>
-                        <img src="img/http/http5.png" width="400" />
-                        <h3>Protocolo usado</h3>
-                        <h4>HTTP 1.1</h4>
-                        <img src="img/http/http6.png" width="400" />
-                        <h3>Acuerdo en tres bandas entre cliente y servidor</h3>
-                        <p>Los 3 primeros paquetes TCP de esta captura son el acuerdo en tres bandas entre cliente y
-                            servidor.
-                            Se envían paquetes 3 paquetes entre el servidor y el cliente para ponerse de acuerdo y luego
-                            se empiezan a enviar los datos.</p>
-                        <img src="img/http/http7.png" width="400" />
-                    </div>
+
+                    <h1 class="titulo">¿Que es el FTP?</h1>
+
+                    <p class="normal">El Protocolo de transferencia de archivos (en inglés F ile Transfer Protocol o
+                        FTP) es un protocolo de red para la transferencia de archivos entre sistemas conectados a una r
+                        ed TCP (Transmission Control Protocol), basado en la arquite ctura cliente-servidor</p>
+
+                    <p class="normal">Desde un equipo cliente se puede conectar a un servidor para descargar archivos
+                        desde él o para enviarle archivos, independientemente del sistema operativo utilizado en cada
+                        equipo. El servicio FTP es ofrecido por la capa de aplicación del modelo de capas de red TCP/IP
+                        al usuario, utilizando normalmente el puert o de red 20 y el 21</p>
+
+                    <p class="subtituloxl">1. En esta guia vamos a configurar un servidor FTP</p>
+
+                    <p class="normal">1.1 Habilitamos el modo Anonimo</p>
+                    <p class="comando">anonymous_enable=yes</p>
+
+                    <img class="shell" src="img/ftp/f1.png">
+
+                    <p class="normal">1.2 Habilitamos las opciones para usuarios del Sistema y para que pueda descargar y
+                        subir</p>
+                    <p class="comando">local_enable=YES</p>
+                    <p class="comando">write_enable=YES</p>
+
+                    <img class="shell" src="img/ftp/f2.png">
+
+                    <p class="normal">1.3 Habilitamos el modo pasivo</p>
+                    <p class="comando">passive</p>
+
+                    <img class="shell" src="img/ftp/f3.png">
+
+                    <p class="normal">1.4 Habilita los logs</p>
+                    <p class="comando">xferlog_file=/far/log/vsftpd.log</p>
+
+                    <img class="shell" src="img/ftp/f4.png">
+
+                    <p class="normal">1.5 Screenshoot logs</p>
+                    <p class="comando">Screenshoot here</p>
+
+                    <img class="shell" src="img/ftp/f5.png">
+
+                    <p class="normal">1.6 Abrimos WireShark y comprobamos que esta funcionando en modo pasivo</p>
+                    <p class="comando">Screenshoot here</p>
+
+                    <img class="shell" src="img/ftp/f6.png">
+
+                    <p class="normal">1.7 Pantallazo Acceso modo grafico</p>
+                    <p class="comando">Screenshoot here</p>
+
+                    <img class="shell" src="img/ftp/f7.png">
                 </div>
-                <!-- ARTICULO 5 TERMINA-->
+
+                <!-- Articulo 6 -->
                 <div id="articulo6" class="pages">
-                    <div class="ssh-articulo">
-                        <h2>¿Que es apache?</h2>
-                        <p>Apache es un servidor HTTP que permite servir contenido a las peticiones que vienen desde los
-                            clientes web (navegadores)</p>
-                        <h3>Instalación del servidor</h3>
-                        <p>A continuación vamos a ver los pasos a seguir para crear el contenedor (Docker) a partir de una imagen personalizada.</p>
-                        <p>Pimero preparamos los archivos de la Web que contendrá el servidor:</p>
-                        <pre>
-$ mkdir public-html
-$ cat > ./public-html/index.html
-Ahora creamos el fichero "Dockerfile" con este contenido:
-cat > Dockerfile
-FROM httpd:2.4
-COPY ./public-html/ /usr/local/apache2/htdocs/ (CTRL+C)
-                        </pre>
-<pre>
-    El siguiente paso es generar la imagen que nos servirá de plantilla para nuestros contenedores:
+                    <h1 class="titulo">¿Que es Apache?</h1>
+                    <p class="normal">Apache es un software especializado en ofrecer servicios de servidor web. Es
+                        versátil, ligero y muy útil, además de ser completamente gratuito y de código abierto</p>
 
-$ docker build -t mi-imagen-apache2 .
-Ahora podemos crear un contenedor "vivo", lo creamos y lanzamos con:
+                    <p class="normal">Apache sirve para mostrar toda la información en pantalla cuando un usuario
+                        realiza una búsqueda web. Es el software que se encarga de acceder a los ficheros alojados en el
+                        servidor para mostrar sus contenidos a petición del visitante.</p>
+                    <p class="subtituloxl">1. Reverse</p>
+                    <p class="normal">A continuación vamos a ver los pasos a seguir para crear el contenedor (Docker) a
+                        partir de una imagen personalizada.</p>
+                    <p class="normal">1.2 Pimero preparamos los archivos de la Web que contendrá el servidor:</p>
 
-$ docker run -dit --name mi-container-apache -p 8080:80 mi-imagen-apache2
-Configuración
-El servidor escuchará el puerto 8008, NO eliminar el puerto 80.
+                    <p class="comando">$ mkdir public-html/{uno,dos,tres}</p>
+                    <img class="shell" src="img/apache/ap1.PNG">
 
-Rehacer la imagen (cada vez que hagamos cambios):
+                    <p class="comando">$ cat > ./public-html/index.html</p>
+                    <img class="shell" src="img/apache/ap2.PNG">
 
-$ docker build -t mi-imagen-apache2 .
-Parar el contenedor (para poder borrarlo):
+                    <p class="normal">1.3 Ahora creamos el fichero "Dockerfile" con este contenido:</p>
+                    <p class="comando">cat > Dockerfile</p>
+                    <img class="shell" src="img/apache/ap3.PNG">
 
-$ docker stop mi-container-apache
-Borrar el contenedor:
+                    <p class="normal">1.4 El siguiente paso es generar la imagen que nos servirá de plantilla para nuestros
+                        contenedores:</p>
+                    <p class="comando">$ docker build -t mi-imagen-apache2 .</p>
+                    <img class="shell" src="img/apache/ap4.PNG" width="800px">
 
-$ docker rm mi-container-apache
-Crear de nuevo el contenedor y lanzarlo:
+                    <p class="normal">1.5 Ahora podemos crear un contenedor "vivo", lo creamos y lanzamos con:</p>
+                    <p class="comando">$ docker run -dit --name mi-container-apache -p 8080:80 mi-imagen-apache2</p>
+                    <img class="shell" src="img/apache/ap5.PNG" width="800px">
 
-$ docker run -dit --name mi-container-apache -p 8080:80 mi-imagen-apache2
-Copiar el archivo de configuración del contenedor a la máquina física (se hace en la misma carpeta donde está el Dockerfile):
+                    <p class="normal">1.6 Parar el contenedor (para poder borrarlo):</p>
+                    <p class="comando">$ docker stop mi-container-apache</p>
+                    <img class="shell" src="img/apache/ap6.PNG">
 
-$ docker cp mi-container-apache:/usr/local/apache2/conf/httpd.conf .
-Modificamos el Dockerfile:
+                    <p class="normal">1.7 Borrar el contenedor:</p>
+                    <p class="comando">$ docker rm mi-container-apache</p>
+                    <img class="shell" src="img/apache/ap7.PNG">
 
-FROM httpd:2.4
-COPY ./public-html/ /usr/local/apache2/htdocs/
-COPY ./httpd.conf /usr/local/apache2/conf/
-Creación del fichero htpasswd
-En el directorio de trabajo (donde está el Dockerfile) ejecuto:
+                    <p class="normal">1.8 Copiar el archivo de configuración del contenedor a la máquina física (se hace en
+                        la misma carpeta donde está el Dockerfile):</p>
+                    <p class="comando">docker cp mi-container-apache:/usr/local/apache2/conf/httpd.conf .</p>
 
-$ htpasswd -c .htpasswd usuario
-Si no lo tengo instalado:
+                    <img class="shell" src="img/apache/ap8.PNG">
 
-$ sudo apt install apache2-utils
-Añadir el .htpassword a la imagen
-Modifico el Dockerfile para que quede así:
+                    <p class="subtituloxl">2. Modificamos el Dockerfile:</p>
+                    <img class="shell" src="img/apache/ap9.PNG">
 
-FROM httpd:2.4
-COPY ./public-html/ /usr/local/apache2/htdocs/
-COPY ./httpd.conf /usr/local/apache2/conf/
-COPY .htpasswd /usr/local/apache2/conf/
-Añadimos la autenticación a Apache
-< Location "/dos"> 
-    AuthType basic
-    AuthName "DOS: Autenticación Básica"
-    AuthUserFile /usr/local/apache2/conf/.htpasswd
-    Require valid-user
-</ Location>
-Creo un script para automatizar la actualización de los contenedores
-(fichero reload.sh)
+                    <p class="subtituloxl">3. Creacion del fichero htpasswd</p>
+                    <p class="normal">3.1 En el directorio de trabajo (donde está el Dockerfile) ejecuto:</p>
 
-#!/bin/bash
-echo "INICIO"
-echo "Parando el contenedor: "
-docker stop mi-container-apache
-echo "Eliminando el contenedor: "
-docker rm mi-container-apache
-echo "Generando la nueva imagen: "
-docker build -t mi-imagen-apache2 .
-echo "Creando el contenedor y poniéndolo en marcha"
-docker run -dit --name mi-container-apache -p 8080:80 mi-imagen-apache2
-echo "TERMINADO!!!"
-Autenticación DIGEST
-Primero: creamos el archivo de contraseñas:
+                    <p class="comando">$ htpasswd -c .htpasswd usuario</p>
+                    <img class="shell" src="img/apache/ap10.PNG">
 
-htdigest -c .htdigest restringido pepe
-Segundo: modificamos el Dokcerfile:
+                    <p class="subtituloxl">4. Añadir el .htpassword a la imagen</p>
+                    <p class="normal">4.1 Modifico el Dockerfile para que quede así:</p>
+                    <img class="shell" src="img/apache/ap11.PNG">
 
-FROM httpd:2.4
-COPY ./public-html/ /usr/local/apache2/htdocs/
-COPY ./httpd.conf /usr/local/apache2/conf/
-COPY .htpasswd /usr/local/apache2/conf/
-COPY .htdigest /usr/local/apache2/conf/
-Tercero: Modifcamos el httpd.conf añadiendo al final:
+                    <p class="subtituloxl">5. Añadimos la autenticación a Apache</p>
+                    <img class="shell" src="img/apache/ap12.PNG">
 
-< Location "/tres"> 
-    AuthType digest
-    AuthName "restringido"
-    AuthDigestProvider file
-    AuthUserFile /usr/local/apache2/conf/.htdigest
-    Require valid-user
-</ Location> 
-</pre>
+                    <p class="subtituloxl">6. Creo un script para automatizar la actualización de los contenedores</p>
+                    <p class="normal">6.1 (fichero reload.sh)</p>
+                    <img class="shell" src="img/apache/ap13.PNG">
 
-                    </div>
+                    <p class="subtituloxl">7. Accedemos a DOS</p>
+                    <p class="normal">7.1 Nos pide autenticación basica</p>
+                    <img class="shell" src="img/apache/ap14.PNG">
+
+                    <p class="subtituloxl">8. Autenticación DIGEST</p>
+                    <p class="normal">8.1 Primero: creamos el archivo de contraseñas:</p>
+                    <p class="comando">htdigest -c .htdigest restringido pepe</p>
+                    <img class="shell" src="img/apache/ap15.PNG">
+
+                    <p class="normal">8.2 Segundo: modificamos el Dokcerfile:</p>
+                    <img class="shell" src="img/apache/ap16.PNG">
+
+                    <p class="normal">8.3 Tercero: Modifcamos el httpd.conf añadiendo al final:</p>
+                    <img class="shell" src="img/apache/ap17.PNG">
+
+                    <p class="normal">8.4 Activamos el modulo del digest</p>
+                    <img class="shell" src="img/apache/ap18.PNG">
+
+                    <p class="normal">8.5 Probamos la autenticación DIGEST</p>
+                    <img class="shell" src="img/apache/ap19.PNG">
+
+                    <p class="subtituloxl">9. Anadiendo seguridad SLL al contenedor</p>
+                    <p class="normal">9.1 Ejecutamos los siguientes comandos</p>
+
+                    <p class="comando">mkdir ssl</p>
+                    <p class="comando">openssl genrsa -out ssl/server.key 1024</p>
+                    <p class="comando">openssl req -new -key ssl/server.key -out ssl/server.csr</p>
+                    <p class="comando">openssl x509 -req -days 365 -in ssl/server.csr -signkey ssl/server.key -out ssl/server.crt</p>
+                    <img class="shell" src="img/apache/ap20.PNG">
+
+                    <p class="normal">9.2 Modificamos el Dockerfile:</p>
+                    <img class="shell" src="img/apache/ap21.PNG">
+
+                    <p class="normal">9.3 Modificamos el httpd.conf:</p>
+                    <img class="shell" src="img/apache/ap22.PNG">
+
+                    <p class="normal">9.4 Comprobamos el https://</p>
+                    <img class="shell" src="img/apache/ap23.PNG">
+
+                    <p class="subtituloxl">10. Apache2  como reverse proxy</p>
+                    <p class="normal">10.1 Primero creamos estos directorios</p>
+                    <img class="shell" src="img/apache/ap24.PNG">
+
+                    <p class="normal">10.2 Contenido del Index</p>
+                    <img class="shell" src="img/apache/ap25.PNG">
+
+                    <p class="normal">10.3 Contenido del Dockerfile</p>
+                    <img class="shell" src="img/apache/ap26.PNG">
+
+                    <p class="normal">10.4 Contenido del httpd.conf</p>
+                    <a href="httpd.html"><div class="boton">Click Aqui</div></a>
+
+                    <p class="normal">10.5 Comprobamos que funciona correctamente</p>
+                    <img class="shell" src="img/apache/ap27.PNG">
+
+
                 </div>
 
-            </div>
-            <!--MEMU-->
-            <div class="menu-articulos">
+            </main>
+            <!-- Aside de informacion y navegacion -->
+            <aside>
+
+                <!-- Redes Sociales -->
                 <div class="social">
                     <p>REDES SOCIALES</p>
-                    <img src="img/wb.png" width="40" />
-                    <img src="img/fbb.png" width="40" />
-                    <img src="img/isb.png" width="40" />
-                    <img src="img/twb.png" width="40" />
+                    <img src="img/wb.png" width="45">
+                    <img src="img/fbb.png" width="45">
+                    <img src="img/isb.png" width="45">
+                    <img src="img/twb.png" width="45">
                 </div>
-                <div class="secciones">
+
+                <div class="secciones" id="navigationMenu">
                     <p>SECCIONES</p>
-                    <div class="s-redes" id="navigationMenu">
-                        <h2>REDES</h2>
-                        <div class="s-redes-items">
-                            <a href="#articulo1"><img src="img/docker.jpg" width="55px"></a>
+
+                    <a href="#articulo1">
+                        <div class="seccion">
+                            <img src="img/docker.jpg">
+                            <p>DOCKER</p>
                         </div>
-                        <div class="s-redes-items">
-                            <a href="#articulo2" id="lol"><img src="img/ssh.jpg" width="55px"></a>
+                    </a>
+
+                    <div class="clearfix"></div>
+
+                    <a href="#articulo2">
+                        <div class="seccion">
+                            <img src="img/ssh.jpg">
+                            <p>SSH</p>
                         </div>
-                        <div class="s-redes-items">
-                            <a href="#articulo3"><img src="img/ftp.jpg" width="55px"></a>
+                    </a>
+
+                    <div class="clearfix"></div>
+
+                    <a href="#articulo3">
+                        <div class="seccion">
+                            <img src="img/telnet.jpg">
+                            <p>TELNET</p>
                         </div>
-                        <div class="s-redes-items">
-                            <a href="#articulo4"><img src="img/telnet.jpg" width="55px"></a>
+                    </a>
+
+
+                    <div class="clearfix"></div>
+
+                    <a href="#articulo4">
+                        <div class="seccion">
+                            <img src="img/http.jpg">
+                            <p>HTTP</p>
                         </div>
-                        <div class="s-redes-items">
-                            <a href="#articulo5"><img src="img/http.jpg" width="55px"></a>
+                    </a>
+                    <div class="clearfix"></div>
+
+                    <a href="#articulo5">
+                        <div class="seccion">
+                            <img src="img/ftp.jpg">
+                            <p>FTP</p>
                         </div>
-                        <div class="s-redes-items">
-                            <a href="#articulo6"><img src="img/apache.jpg" width="55px"></a>
+                    </a>
+                    <div class="clearfix"></div>
+
+                    <a href="#articulo6">
+                        <div class="seccion">
+                            <img src="img/apache.jpg">
+                            <p>APACHE</p>
                         </div>
-                    </div>
-                    <div class="s-informatica">
-                        <h2>INFORMATICA</h2>
-                    </div>
+                    </a>
+
                 </div>
-                <div class="ultimas-entradas">
-                    <p>ULTIMAS ENTRADAS</p>
-                    <a href="#">
-                        <h6>Instalacion MAC OS en Ryzen 7 3700X</h6>
-                    </a>
-                    <a href="#">
-                        <h6>MorePowerTool RX 5700 XT Tutorial</h6>
-                    </a>
-                    <a href="#">
-                        <h6>No se que poner aqui</h6>
-                    </a>
-                    <a href="#">
-                        <h6>Lorem impsum</h6>
-                    </a>
-                    <a href="#">
-                        <h6>Impsum ImpsumImpsum Impsum Impsum </h6>
-                    </a>
-                </div>
-            </div>
+
+            </aside>
         </div>
-        <!--TEMRINA MAIN ACONTENCT-->
-        <footer>
-            <p style="color: white;">Footer </p>
-        </footer>
-
     </div>
+</body>
 
-
-</>
-
-</>
+</html>
